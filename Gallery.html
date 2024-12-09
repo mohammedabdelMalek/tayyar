@@ -1,0 +1,1622 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Healthy Park</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.svg" />
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- Web Font -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    
+        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+ 
+    <!-- ========================= CSS here ========================= -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/LineIcons.2.0.css" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="assets/css/tiny-slider.css" />
+    <link rel="stylesheet" href="assets/css/glightbox.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+</head>
+<body>
+
+ 
+ 
+
+    <div class="cart">
+        <div class="top_cart">
+            <h3>Cart Items : <span class="Count_item_cart">0</span></h3>
+            <span onclick="open_close_cart()" class="close_cart"><i class="fa-regular fa-circle-xmark"></i></span>
+        </div>
+
+
+        <div class="items_in_cart" id="cart_items">
+
+
+
+        </div>
+
+
+        <div class="bottom_cart">
+            <div class="total">
+                <p>subtotal</p>
+                <p class="price_cart_toral">$0</p>
+            </div>
+
+            <div class="button_cart">
+                <a href="#" class="btn_cart btn">Checkout</a>
+                <span onclick="open_close_cart()" class="btn_cart trans_bg btn">Shop More</span>
+            </div>
+        </div>
+
+    </div>
+    <!--[if lte IE 9]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+        your experience and security.
+      </p>
+    <![endif]-->
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- /End Preloader -->
+
+    <!-- Start Header Area -->
+    <header class="header navbar-area">
+        <div class="container">
+            <div class="row g-0 align-items-center">
+                <div class="col-md-12">
+                    <div class="nav-inner">
+                        <nav class="navbar navbar-expand-lg">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="assets/images/logo/cc6627e592ae17ee34cfc41dacc44bfd.png" alt="Logo">
+                            </a>
+                            <button class="navbar-toggler mobile-menu-btn" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                <ul id="nav" class="navbar-nav ms-auto">
+                                    <li class="nav-item">
+                                        <a id="home" class="active nav-link" href="index.html">الصفحة الرئيسية</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a id="FoodMenu" class="nav-link" href="Gallery2.html"> قائمة الأطعمة </a>
+                                        <ul class="sub-menu collapse" id="submenu-1-3">
+                                            <li class="nav-item"><a href="Gallery2.html">جميع الاطباق</a></li>
+                                            <li class="nav-item"><a href="Gallery.html">الخالي من الجلوتين</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a id="about_us" class="nav-link" href="about.html">من نــحن </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a  id="Contact_us" class="nav-link" href="Contact us.html">تواصل معنا</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a id="ourlocation" class="nav-link" href="our location.html"> موقعنا</a>
+                                    </li>
+                                    <li id="langToggle" class="nav-item">
+                                        <a class="nav-link" onclick="toggleLanguage()" role="button">
+                                            <img id="flagIcon" class="bg-white" src="assets/images/flags/sud.png" alt="العربية" style="width:18px;height:15px;margin-top:5px;">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                         
+                            
+                            <div class="login-button d-none d-lg-flex"> <!-- Visible only on large screens -->
+                                <a onclick="favoritesIcon()" class="like position-relative text-white">
+                                    <i id="favoritesIcon" class="lni lni-heart"></i>
+                                </a>
+                                <a class="like text-white">
+                                    <i class="lni lni-search-alt"></i>
+                                </a>
+                            </div>
+    
+                            <div class="d-flex d-lg-none"> <!-- Visible only on small screens -->
+                                <a onclick="favoritesIcon()" class="like text-white me-2">
+                                    <i id="favoritesIcon" class="lni lni-heart"></i>
+                                </a>
+                                <a class="like text-white">
+                                    <i class="lni lni-search-alt"></i>
+                                </a>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+
+  <!-- Start Breadcrumbs -->
+   
+
+    <div class="breadcrumbs">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                     <div class="breadcrumbs-content inner-content">
+                        <h1 class="text-center text-white display-2 fw-bold bg-transparent ">  الأطعمه الخالية من الجلوتين</h1>
+                    </div>
+            
+            </div>
+        </div>
+    </div>
+   
+     
+ 
+ 
+    <!-- <div class="container-fluid page-header py-5">
+    <h1 class="text-center text-white display-2 fw-bold bg-transparent ">الأطعمه الخالية من الجلوتين</h1>
+   
+</div> -->
+ 
+       
+
+    
+<div class="container fruite py-5">
+    <div class="container py-5">
+        <div class="tab-class text-center align-center">
+            <div class="col-lg-12 text-center mb-100 ">
+                <h1>أصناف متعددة لصحة تناسب 
+                    
+                    <span>أسلوب حياتك!</span>  
+                  
+                  </h1>            </div>
+                
+                
+                    <div class="row g-4 justify-content-center">
+                        <div class="col-lg-12 py-2 text-center d-flex justify-content-center flex-column">
+                            <ul class="nav nav-pills d-inline-flex text-center justify-content-center  text-white">
+                                <li class="nav-item ">
+                                    <a class="d-flex m-2 py-2 bg-light rounded-pill active" data-bs-toggle="pill" href="#tab-1">
+                                        <span class="text-dark" style="width: 214px;">الكل</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="d-flex py-2 m-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-2">
+                                        <span class="text-dark" style="width: 214px;">الأطباق الرئيسية</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="d-flex py-2 m-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-3">
+                                        <span class="text-dark" style="width: 214px;">السندويتشات</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="d-flex py-2 m-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-4">
+                                        <span class="text-dark" style="width: 214px;">الشوربات والسلطات</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-pills d-inline-flex text-center justify-content-center mb-5 text-white">
+                                <li class="nav-item">
+                                    <a class="d-flex py-2 m-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-5">
+                                        <span class="text-dark" style="width: 214px;">الأطباق الجانبية</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="d-flex py-2 m-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-6">
+                                        <span class="text-dark" style="width: 214px;">الحلويات</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="d-flex py-2 m-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-7">
+                                        <span class="text-dark" style="width: 214px;">المشروبات</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="d-flex py-2 m-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-8">
+                                        <span class="text-dark" style="width: 214px;">الوجبات الخفيفة</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    
+                </div>
+                <div class="tab-content">
+                    <div id="tab-1" class="tab-pane fade show p-0 active">
+                        <div class="row g-4">
+                            <div class="col-lg-12">
+                                <div class="row g-4">
+                            
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="rounded position-relative">
+                                            <div class="fruite-img">
+                                                <img src="assets/images/b98dcd18c90f78b2f1eff83668221528.png" class="img-fluid w-100 rounded-3" alt="" style="height: 250px;width: 250px; object-fit: cover;">
+                                                <div class="item-position" style="position: absolute; top: 10px; right: 10px; border-radius: 50%; padding: 5px;">
+                                                    <a onclick="addToFavorites('طبق السلطة الصحي', '6.99', 'assets/images/b98dcd18c90f78b2f1eff83668221528.png', event)" class="like">
+                                                        <i class="lni lni-heart" style="color: #5B9324;"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="p-3 border border-secondary border-top-0 rounded-bottom">
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="text-dark">طبق السلطة الصحي</span>
+                                                    <span class="text-truncate">الاطباق الجانبية</span>
+                                                </div>
+                                                <br>
+                                                <span>يحتوى على 95 كالوري</span>
+                                                <div class="progress mb-3">
+                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between flex-lg-nowrap">
+                                                    <span class="text-dark fs-6 fw-bold">6.99 ريال سعودي</span>
+                                                    <a href="Detail.html" class="btn border border-secondary rounded-pill text-white" style="background-color: #5B9324;"> إقرأ المزيد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="rounded position-relative">
+                                            <div class="fruite-img">
+                                                <img src="assets/images/b98dcd18c90f78b2f1eff83668221528.png" class="img-fluid w-100 rounded-3" alt="" style="height: 250px;width: 250px; object-fit: cover;">
+                                                <div class="item-position" style="position: absolute; top: 10px; right: 10px; border-radius: 50%; padding: 5px;">
+                                                    <a onclick="addToFavorites('طبق السلطة الصحي', '6.99', 'assets/images/b98dcd18c90f78b2f1eff83668221528.png', event)" class="like">
+                                                        <i class="lni lni-heart" style="color: #5B9324;"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="p-3 border border-secondary border-top-0 rounded-bottom">
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="text-dark">طبق السلطة الصحي</span>
+                                                    <span class="text-truncate">الاطباق الجانبية</span>
+                                                </div>
+                                                <br>
+                                                <span>يحتوى على 95 كالوري</span>
+                                                <div class="progress mb-3">
+                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between flex-lg-nowrap">
+                                                    <span class="text-dark fs-6 fw-bold">6.99 ريال سعودي</span>
+                                                    <a href="Detail.html" class="btn border border-secondary rounded-pill text-white" style="background-color: #5B9324;"> إقرأ المزيد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="rounded position-relative">
+                                            <div class="fruite-img">
+                                                <img src="assets/images/b98dcd18c90f78b2f1eff83668221528.png" class="img-fluid w-100 rounded-3" alt="" style="height: 250px;width: 250px; object-fit: cover;">
+                                                <div class="item-position" style="position: absolute; top: 10px; right: 10px; border-radius: 50%; padding: 5px;">
+                                                    <a onclick="addToFavorites('طبق السلطة الصحي', '6.99', 'assets/images/b98dcd18c90f78b2f1eff83668221528.png', event)" class="like">
+                                                        <i class="lni lni-heart" style="color: #5B9324;"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="p-3 border border-secondary border-top-0 rounded-bottom">
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="text-dark">طبق السلطة الصحي</span>
+                                                    <span class="text-truncate">الاطباق الجانبية</span>
+                                                </div>
+                                                <br>
+                                                <span>يحتوى على 95 كالوري</span>
+                                                <div class="progress mb-3">
+                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between flex-lg-nowrap">
+                                                    <span class="text-dark fs-6 fw-bold">6.99 ريال سعودي</span>
+                                                    <a href="Detail.html" class="btn border border-secondary rounded-pill text-white" style="background-color: #5B9324;"> إقرأ المزيد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="rounded position-relative">
+                                            <div class="fruite-img">
+                                                <img src="assets/images/b98dcd18c90f78b2f1eff83668221528.png" class="img-fluid w-100 rounded-3" alt="" style="height: 250px;width: 250px; object-fit: cover;">
+                                                <div class="item-position" style="position: absolute; top: 10px; right: 10px; border-radius: 50%; padding: 5px;">
+                                                    <a onclick="addToFavorites('طبق السلطة الصحي', '6.99', 'assets/images/b98dcd18c90f78b2f1eff83668221528.png', event)" class="like">
+                                                        <i class="lni lni-heart" style="color: #5B9324;"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="p-3 border border-secondary border-top-0 rounded-bottom">
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="text-dark">طبق السلطة الصحي</span>
+                                                    <span class="text-truncate">الاطباق الجانبية</span>
+                                                </div>
+                                                <br>
+                                                <span>يحتوى على 95 كالوري</span>
+                                                <div class="progress mb-3">
+                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between flex-lg-nowrap">
+                                                    <span class="text-dark fs-6 fw-bold">6.99 ريال سعودي</span>
+                                                    <a href="Detail.html" class="btn border border-secondary rounded-pill text-white" style="background-color: #5B9324;"> إقرأ المزيد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="rounded position-relative">
+                                            <div class="fruite-img">
+                                                <img src="assets/images/b98dcd18c90f78b2f1eff83668221528.png" class="img-fluid w-100 rounded-3" alt="" style="height: 250px;width: 250px; object-fit: cover;">
+                                                <div class="item-position" style="position: absolute; top: 10px; right: 10px; border-radius: 50%; padding: 5px;">
+                                                    <a onclick="addToFavorites('طبق السلطة الصحي', '6.99', 'assets/images/b98dcd18c90f78b2f1eff83668221528.png', event)" class="like">
+                                                        <i class="lni lni-heart" style="color: #5B9324;"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="p-3 border border-secondary border-top-0 rounded-bottom">
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="text-dark">طبق السلطة الصحي</span>
+                                                    <span class="text-truncate">الاطباق الجانبية</span>
+                                                </div>
+                                                <br>
+                                                <span>يحتوى على 95 كالوري</span>
+                                                <div class="progress mb-3">
+                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between flex-lg-nowrap">
+                                                    <span class="text-dark fs-6 fw-bold">6.99 ريال سعودي</span>
+                                                    <a href="Detail.html" class="btn border border-secondary rounded-pill text-white" style="background-color: #5B9324;"> إقرأ المزيد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="rounded position-relative">
+                                            <div class="fruite-img">
+                                                <img src="assets/images/b98dcd18c90f78b2f1eff83668221528.png" class="img-fluid w-100 rounded-3" alt="" style="height: 250px;width: 250px; object-fit: cover;">
+                                                <div class="item-position" style="position: absolute; top: 10px; right: 10px; border-radius: 50%; padding: 5px;">
+                                                    <a onclick="addToFavorites('طبق السلطة الصحي', '6.99', 'assets/images/b98dcd18c90f78b2f1eff83668221528.png', event)" class="like">
+                                                        <i class="lni lni-heart" style="color: #5B9324;"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="p-3 border border-secondary border-top-0 rounded-bottom">
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="text-dark">طبق السلطة الصحي</span>
+                                                    <span class="text-truncate">الاطباق الجانبية</span>
+                                                </div>
+                                                <br>
+                                                <span>يحتوى على 95 كالوري</span>
+                                                <div class="progress mb-3">
+                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between flex-lg-nowrap">
+                                                    <span class="text-dark fs-6 fw-bold">6.99 ريال سعودي</span>
+                                                    <a href="Detail.html" class="btn border border-secondary rounded-pill text-white" style="background-color: #5B9324;"> إقرأ المزيد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                 
+                                    
+                                  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-2" class="tab-pane fade show p-0">
+                        <div class="row g-4">
+                            <div class="col-lg-12">
+                                <div class="row g-4">
+                            
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="rounded position-relative">
+                                            <div class="fruite-img">
+                                                <img src="assets/images/b98dcd18c90f78b2f1eff83668221528.png" class="img-fluid w-100 rounded-3" alt="" style="height: 250px;width: 250px; object-fit: cover;">
+                                                <div class="item-position" style="position: absolute; top: 10px; right: 10px; border-radius: 50%; padding: 5px;">
+                                                    <a onclick="addToFavorites('طبق السلطة الصحي', '6.99', 'assets/images/b98dcd18c90f78b2f1eff83668221528.png', event)" class="like">
+                                                        <i class="lni lni-heart" style="color: #5B9324;"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="p-3 border border-secondary border-top-0 rounded-bottom">
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="text-dark">طبق السلطة الصحي</span>
+                                                    <span class="text-truncate">الاطباق الجانبية</span>
+                                                </div>
+                                                <br>
+                                                <span>يحتوى على 95 كالوري</span>
+                                                <div class="progress mb-3">
+                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between flex-lg-nowrap">
+                                                    <span class="text-dark fs-6 fw-bold">6.99 ريال سعودي</span>
+                                                    <a href="Detail.html" class="btn border border-secondary rounded-pill text-white" style="background-color: #5B9324;"> إقرأ المزيد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="rounded position-relative">
+                                            <div class="fruite-img">
+                                                <img src="assets/images/b98dcd18c90f78b2f1eff83668221528.png" class="img-fluid w-100 rounded-3" alt="" style="height: 250px;width: 250px; object-fit: cover;">
+                                                <div class="item-position" style="position: absolute; top: 10px; right: 10px; border-radius: 50%; padding: 5px;">
+                                                    <a onclick="addToFavorites('طبق السلطة الصحي', '6.99', 'assets/images/b98dcd18c90f78b2f1eff83668221528.png', event)" class="like">
+                                                        <i class="lni lni-heart" style="color: #5B9324;"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="p-3 border border-secondary border-top-0 rounded-bottom">
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="text-dark">طبق السلطة الصحي</span>
+                                                    <span class="text-truncate">الاطباق الجانبية</span>
+                                                </div>
+                                                <br>
+                                                <span>يحتوى على 95 كالوري</span>
+                                                <div class="progress mb-3">
+                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between flex-lg-nowrap">
+                                                    <span class="text-dark fs-6 fw-bold">6.99 ريال سعودي</span>
+                                                    <a href="Detail.html" class="btn border border-secondary rounded-pill text-white" style="background-color: #5B9324;"> إقرأ المزيد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="rounded position-relative">
+                                            <div class="fruite-img">
+                                                <img src="assets/images/b98dcd18c90f78b2f1eff83668221528.png" class="img-fluid w-100 rounded-3" alt="" style="height: 250px;width: 250px; object-fit: cover;">
+                                                <div class="item-position" style="position: absolute; top: 10px; right: 10px; border-radius: 50%; padding: 5px;">
+                                                    <a onclick="addToFavorites('طبق السلطة الصحي', '6.99', 'assets/images/b98dcd18c90f78b2f1eff83668221528.png', event)" class="like">
+                                                        <i class="lni lni-heart" style="color: #5B9324;"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="p-3 border border-secondary border-top-0 rounded-bottom">
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="text-dark">طبق السلطة الصحي</span>
+                                                    <span class="text-truncate">الاطباق الجانبية</span>
+                                                </div>
+                                                <br>
+                                                <span>يحتوى على 95 كالوري</span>
+                                                <div class="progress mb-3">
+                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between flex-lg-nowrap">
+                                                    <span class="text-dark fs-6 fw-bold">6.99 ريال سعودي</span>
+                                                    <a href="Detail.html" class="btn border border-secondary rounded-pill text-white" style="background-color: #5B9324;"> إقرأ المزيد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="rounded position-relative">
+                                            <div class="fruite-img">
+                                                <img src="assets/images/b98dcd18c90f78b2f1eff83668221528.png" class="img-fluid w-100 rounded-3" alt="" style="height: 250px;width: 250px; object-fit: cover;">
+                                                <div class="item-position" style="position: absolute; top: 10px; right: 10px; border-radius: 50%; padding: 5px;">
+                                                    <a onclick="addToFavorites('طبق السلطة الصحي', '6.99', 'assets/images/b98dcd18c90f78b2f1eff83668221528.png', event)" class="like">
+                                                        <i class="lni lni-heart" style="color: #5B9324;"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="p-3 border border-secondary border-top-0 rounded-bottom">
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="text-dark">طبق السلطة الصحي</span>
+                                                    <span class="text-truncate">الاطباق الجانبية</span>
+                                                </div>
+                                                <br>
+                                                <span>يحتوى على 95 كالوري</span>
+                                                <div class="progress mb-3">
+                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between flex-lg-nowrap">
+                                                    <span class="text-dark fs-6 fw-bold">6.99 ريال سعودي</span>
+                                                    <a href="Detail.html" class="btn border border-secondary rounded-pill text-white" style="background-color: #5B9324;"> إقرأ المزيد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="rounded position-relative">
+                                            <div class="fruite-img">
+                                                <img src="assets/images/b98dcd18c90f78b2f1eff83668221528.png" class="img-fluid w-100 rounded-3" alt="" style="height: 250px;width: 250px; object-fit: cover;">
+                                                <div class="item-position" style="position: absolute; top: 10px; right: 10px; border-radius: 50%; padding: 5px;">
+                                                    <a onclick="addToFavorites('طبق السلطة الصحي', '6.99', 'assets/images/b98dcd18c90f78b2f1eff83668221528.png', event)" class="like">
+                                                        <i class="lni lni-heart" style="color: #5B9324;"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="p-3 border border-secondary border-top-0 rounded-bottom">
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="text-dark">طبق السلطة الصحي</span>
+                                                    <span class="text-truncate">الاطباق الجانبية</span>
+                                                </div>
+                                                <br>
+                                                <span>يحتوى على 95 كالوري</span>
+                                                <div class="progress mb-3">
+                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between flex-lg-nowrap">
+                                                    <span class="text-dark fs-6 fw-bold">6.99 ريال سعودي</span>
+                                                    <a href="Detail.html" class="btn border border-secondary rounded-pill text-white" style="background-color: #5B9324;"> إقرأ المزيد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="rounded position-relative">
+                                            <div class="fruite-img">
+                                                <img src="assets/images/b98dcd18c90f78b2f1eff83668221528.png" class="img-fluid w-100 rounded-3" alt="" style="height: 250px;width: 250px; object-fit: cover;">
+                                                <div class="item-position" style="position: absolute; top: 10px; right: 10px; border-radius: 50%; padding: 5px;">
+                                                    <a onclick="addToFavorites('طبق السلطة الصحي', '6.99', 'assets/images/b98dcd18c90f78b2f1eff83668221528.png', event)" class="like">
+                                                        <i class="lni lni-heart" style="color: #5B9324;"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="p-3 border border-secondary border-top-0 rounded-bottom">
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="text-dark">طبق السلطة الصحي</span>
+                                                    <span class="text-truncate">الاطباق الجانبية</span>
+                                                </div>
+                                                <br>
+                                                <span>يحتوى على 95 كالوري</span>
+                                                <div class="progress mb-3">
+                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between flex-lg-nowrap">
+                                                    <span class="text-dark fs-6 fw-bold">6.99 ريال سعودي</span>
+                                                    <a href="Detail.html" class="btn border border-secondary rounded-pill text-white" style="background-color: #5B9324;"> إقرأ المزيد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                 
+                                    
+                                  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-3" class="tab-pane fade show p-0">
+                        <div class="row g-4">
+                            <div class="col-lg-12">
+                                <div class="row g-4">
+                            
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="rounded position-relative">
+                                            <div class="fruite-img">
+                                                <img src="assets/images/b98dcd18c90f78b2f1eff83668221528.png" class="img-fluid w-100 rounded-3" alt="" style="height: 250px;width: 250px; object-fit: cover;">
+                                                <div class="item-position" style="position: absolute; top: 10px; right: 10px; border-radius: 50%; padding: 5px;">
+                                                    <a onclick="addToFavorites('طبق السلطة الصحي', '6.99', 'assets/images/b98dcd18c90f78b2f1eff83668221528.png', event)" class="like">
+                                                        <i class="lni lni-heart" style="color: #5B9324;"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="p-3 border border-secondary border-top-0 rounded-bottom">
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="text-dark">طبق السلطة الصحي</span>
+                                                    <span class="text-truncate">الاطباق الجانبية</span>
+                                                </div>
+                                                <br>
+                                                <span>يحتوى على 95 كالوري</span>
+                                                <div class="progress mb-3">
+                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between flex-lg-nowrap">
+                                                    <span class="text-dark fs-6 fw-bold">6.99 ريال سعودي</span>
+                                                    <a href="Detail.html" class="btn border border-secondary rounded-pill text-white" style="background-color: #5B9324;"> إقرأ المزيد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="rounded position-relative">
+                                            <div class="fruite-img">
+                                                <img src="assets/images/b98dcd18c90f78b2f1eff83668221528.png" class="img-fluid w-100 rounded-3" alt="" style="height: 250px;width: 250px; object-fit: cover;">
+                                                <div class="item-position" style="position: absolute; top: 10px; right: 10px; border-radius: 50%; padding: 5px;">
+                                                    <a onclick="addToFavorites('طبق السلطة الصحي', '6.99', 'assets/images/b98dcd18c90f78b2f1eff83668221528.png', event)" class="like">
+                                                        <i class="lni lni-heart" style="color: #5B9324;"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="p-3 border border-secondary border-top-0 rounded-bottom">
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="text-dark">طبق السلطة الصحي</span>
+                                                    <span class="text-truncate">الاطباق الجانبية</span>
+                                                </div>
+                                                <br>
+                                                <span>يحتوى على 95 كالوري</span>
+                                                <div class="progress mb-3">
+                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between flex-lg-nowrap">
+                                                    <span class="text-dark fs-6 fw-bold">6.99 ريال سعودي</span>
+                                                    <a href="Detail.html" class="btn border border-secondary rounded-pill text-white" style="background-color: #5B9324;"> إقرأ المزيد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="rounded position-relative">
+                                            <div class="fruite-img">
+                                                <img src="assets/images/b98dcd18c90f78b2f1eff83668221528.png" class="img-fluid w-100 rounded-3" alt="" style="height: 250px;width: 250px; object-fit: cover;">
+                                                <div class="item-position" style="position: absolute; top: 10px; right: 10px; border-radius: 50%; padding: 5px;">
+                                                    <a onclick="addToFavorites('طبق السلطة الصحي', '6.99', 'assets/images/b98dcd18c90f78b2f1eff83668221528.png', event)" class="like">
+                                                        <i class="lni lni-heart" style="color: #5B9324;"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="p-3 border border-secondary border-top-0 rounded-bottom">
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="text-dark">طبق السلطة الصحي</span>
+                                                    <span class="text-truncate">الاطباق الجانبية</span>
+                                                </div>
+                                                <br>
+                                                <span>يحتوى على 95 كالوري</span>
+                                                <div class="progress mb-3">
+                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between flex-lg-nowrap">
+                                                    <span class="text-dark fs-6 fw-bold">6.99 ريال سعودي</span>
+                                                    <a href="Detail.html" class="btn border border-secondary rounded-pill text-white" style="background-color: #5B9324;"> إقرأ المزيد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="rounded position-relative">
+                                            <div class="fruite-img">
+                                                <img src="assets/images/b98dcd18c90f78b2f1eff83668221528.png" class="img-fluid w-100 rounded-3" alt="" style="height: 250px;width: 250px; object-fit: cover;">
+                                                <div class="item-position" style="position: absolute; top: 10px; right: 10px; border-radius: 50%; padding: 5px;">
+                                                    <a onclick="addToFavorites('طبق السلطة الصحي', '6.99', 'assets/images/b98dcd18c90f78b2f1eff83668221528.png', event)" class="like">
+                                                        <i class="lni lni-heart" style="color: #5B9324;"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="p-3 border border-secondary border-top-0 rounded-bottom">
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="text-dark">طبق السلطة الصحي</span>
+                                                    <span class="text-truncate">الاطباق الجانبية</span>
+                                                </div>
+                                                <br>
+                                                <span>يحتوى على 95 كالوري</span>
+                                                <div class="progress mb-3">
+                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between flex-lg-nowrap">
+                                                    <span class="text-dark fs-6 fw-bold">6.99 ريال سعودي</span>
+                                                    <a href="Detail.html" class="btn border border-secondary rounded-pill text-white" style="background-color: #5B9324;"> إقرأ المزيد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="rounded position-relative">
+                                            <div class="fruite-img">
+                                                <img src="assets/images/b98dcd18c90f78b2f1eff83668221528.png" class="img-fluid w-100 rounded-3" alt="" style="height: 250px;width: 250px; object-fit: cover;">
+                                                <div class="item-position" style="position: absolute; top: 10px; right: 10px; border-radius: 50%; padding: 5px;">
+                                                    <a onclick="addToFavorites('طبق السلطة الصحي', '6.99', 'assets/images/b98dcd18c90f78b2f1eff83668221528.png', event)" class="like">
+                                                        <i class="lni lni-heart" style="color: #5B9324;"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="p-3 border border-secondary border-top-0 rounded-bottom">
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="text-dark">طبق السلطة الصحي</span>
+                                                    <span class="text-truncate">الاطباق الجانبية</span>
+                                                </div>
+                                                <br>
+                                                <span>يحتوى على 95 كالوري</span>
+                                                <div class="progress mb-3">
+                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between flex-lg-nowrap">
+                                                    <span class="text-dark fs-6 fw-bold">6.99 ريال سعودي</span>
+                                                    <a href="Detail.html" class="btn border border-secondary rounded-pill text-white" style="background-color: #5B9324;"> إقرأ المزيد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="rounded position-relative">
+                                            <div class="fruite-img">
+                                                <img src="assets/images/b98dcd18c90f78b2f1eff83668221528.png" class="img-fluid w-100 rounded-3" alt="" style="height: 250px;width: 250px; object-fit: cover;">
+                                                <div class="item-position" style="position: absolute; top: 10px; right: 10px; border-radius: 50%; padding: 5px;">
+                                                    <a onclick="addToFavorites('طبق السلطة الصحي', '6.99', 'assets/images/b98dcd18c90f78b2f1eff83668221528.png', event)" class="like">
+                                                        <i class="lni lni-heart" style="color: #5B9324;"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="p-3 border border-secondary border-top-0 rounded-bottom">
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="text-dark">طبق السلطة الصحي</span>
+                                                    <span class="text-truncate">الاطباق الجانبية</span>
+                                                </div>
+                                                <br>
+                                                <span>يحتوى على 95 كالوري</span>
+                                                <div class="progress mb-3">
+                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between flex-lg-nowrap">
+                                                    <span class="text-dark fs-6 fw-bold">6.99 ريال سعودي</span>
+                                                    <a href="Detail.html" class="btn border border-secondary rounded-pill text-white" style="background-color: #5B9324;"> إقرأ المزيد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                 
+                                    
+                                  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     
+                    <div id="tab-4" class="tab-pane fade show p-0">
+                        <div class="row g-4">
+                            <div class="col-lg-12">
+                                <div class="row g-4">
+                            
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="rounded position-relative">
+                                            <div class="fruite-img">
+                                                <img src="assets/images/b98dcd18c90f78b2f1eff83668221528.png" class="img-fluid w-100 rounded-3" alt="" style="height: 250px;width: 250px; object-fit: cover;">
+                                                <div class="item-position" style="position: absolute; top: 10px; right: 10px; border-radius: 50%; padding: 5px;">
+                                                    <a onclick="addToFavorites('طبق السلطة الصحي', '6.99', 'assets/images/b98dcd18c90f78b2f1eff83668221528.png', event)" class="like">
+                                                        <i class="lni lni-heart" style="color: #5B9324;"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="p-3 border border-secondary border-top-0 rounded-bottom">
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="text-dark">طبق السلطة الصحي</span>
+                                                    <span class="text-truncate">الاطباق الجانبية</span>
+                                                </div>
+                                                <br>
+                                                <span>يحتوى على 95 كالوري</span>
+                                                <div class="progress mb-3">
+                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between flex-lg-nowrap">
+                                                    <span class="text-dark fs-6 fw-bold">6.99 ريال سعودي</span>
+                                                    <a href="Detail.html" class="btn border border-secondary rounded-pill text-white" style="background-color: #5B9324;"> إقرأ المزيد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="rounded position-relative">
+                                            <div class="fruite-img">
+                                                <img src="assets/images/b98dcd18c90f78b2f1eff83668221528.png" class="img-fluid w-100 rounded-3" alt="" style="height: 250px;width: 250px; object-fit: cover;">
+                                                <div class="item-position" style="position: absolute; top: 10px; right: 10px; border-radius: 50%; padding: 5px;">
+                                                    <a onclick="addToFavorites('طبق السلطة الصحي', '6.99', 'assets/images/b98dcd18c90f78b2f1eff83668221528.png', event)" class="like">
+                                                        <i class="lni lni-heart" style="color: #5B9324;"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="p-3 border border-secondary border-top-0 rounded-bottom">
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="text-dark">طبق السلطة الصحي</span>
+                                                    <span class="text-truncate">الاطباق الجانبية</span>
+                                                </div>
+                                                <br>
+                                                <span>يحتوى على 95 كالوري</span>
+                                                <div class="progress mb-3">
+                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between flex-lg-nowrap">
+                                                    <span class="text-dark fs-6 fw-bold">6.99 ريال سعودي</span>
+                                                    <a href="Detail.html" class="btn border border-secondary rounded-pill text-white" style="background-color: #5B9324;"> إقرأ المزيد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="rounded position-relative">
+                                            <div class="fruite-img">
+                                                <img src="assets/images/b98dcd18c90f78b2f1eff83668221528.png" class="img-fluid w-100 rounded-3" alt="" style="height: 250px;width: 250px; object-fit: cover;">
+                                                <div class="item-position" style="position: absolute; top: 10px; right: 10px; border-radius: 50%; padding: 5px;">
+                                                    <a onclick="addToFavorites('طبق السلطة الصحي', '6.99', 'assets/images/b98dcd18c90f78b2f1eff83668221528.png', event)" class="like">
+                                                        <i class="lni lni-heart" style="color: #5B9324;"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="p-3 border border-secondary border-top-0 rounded-bottom">
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="text-dark">طبق السلطة الصحي</span>
+                                                    <span class="text-truncate">الاطباق الجانبية</span>
+                                                </div>
+                                                <br>
+                                                <span>يحتوى على 95 كالوري</span>
+                                                <div class="progress mb-3">
+                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between flex-lg-nowrap">
+                                                    <span class="text-dark fs-6 fw-bold">6.99 ريال سعودي</span>
+                                                    <a href="Detail.html" class="btn border border-secondary rounded-pill text-white" style="background-color: #5B9324;"> إقرأ المزيد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="rounded position-relative">
+                                            <div class="fruite-img">
+                                                <img src="assets/images/b98dcd18c90f78b2f1eff83668221528.png" class="img-fluid w-100 rounded-3" alt="" style="height: 250px;width: 250px; object-fit: cover;">
+                                                <div class="item-position" style="position: absolute; top: 10px; right: 10px; border-radius: 50%; padding: 5px;">
+                                                    <a onclick="addToFavorites('طبق السلطة الصحي', '6.99', 'assets/images/b98dcd18c90f78b2f1eff83668221528.png', event)" class="like">
+                                                        <i class="lni lni-heart" style="color: #5B9324;"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="p-3 border border-secondary border-top-0 rounded-bottom">
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="text-dark">طبق السلطة الصحي</span>
+                                                    <span class="text-truncate">الاطباق الجانبية</span>
+                                                </div>
+                                                <br>
+                                                <span>يحتوى على 95 كالوري</span>
+                                                <div class="progress mb-3">
+                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between flex-lg-nowrap">
+                                                    <span class="text-dark fs-6 fw-bold">6.99 ريال سعودي</span>
+                                                    <a href="Detail.html" class="btn border border-secondary rounded-pill text-white" style="background-color: #5B9324;"> إقرأ المزيد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="rounded position-relative">
+                                            <div class="fruite-img">
+                                                <img src="assets/images/b98dcd18c90f78b2f1eff83668221528.png" class="img-fluid w-100 rounded-3" alt="" style="height: 250px;width: 250px; object-fit: cover;">
+                                                <div class="item-position" style="position: absolute; top: 10px; right: 10px; border-radius: 50%; padding: 5px;">
+                                                    <a onclick="addToFavorites('طبق السلطة الصحي', '6.99', 'assets/images/b98dcd18c90f78b2f1eff83668221528.png', event)" class="like">
+                                                        <i class="lni lni-heart" style="color: #5B9324;"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="p-3 border border-secondary border-top-0 rounded-bottom">
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="text-dark">طبق السلطة الصحي</span>
+                                                    <span class="text-truncate">الاطباق الجانبية</span>
+                                                </div>
+                                                <br>
+                                                <span>يحتوى على 95 كالوري</span>
+                                                <div class="progress mb-3">
+                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between flex-lg-nowrap">
+                                                    <span class="text-dark fs-6 fw-bold">6.99 ريال سعودي</span>
+                                                    <a href="Detail.html" class="btn border border-secondary rounded-pill text-white" style="background-color: #5B9324;"> إقرأ المزيد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="rounded position-relative">
+                                            <div class="fruite-img">
+                                                <img src="assets/images/b98dcd18c90f78b2f1eff83668221528.png" class="img-fluid w-100 rounded-3" alt="" style="height: 250px;width: 250px; object-fit: cover;">
+                                                <div class="item-position" style="position: absolute; top: 10px; right: 10px; border-radius: 50%; padding: 5px;">
+                                                    <a onclick="addToFavorites('طبق السلطة الصحي', '6.99', 'assets/images/b98dcd18c90f78b2f1eff83668221528.png', event)" class="like">
+                                                        <i class="lni lni-heart" style="color: #5B9324;"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="p-3 border border-secondary border-top-0 rounded-bottom">
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="text-dark">طبق السلطة الصحي</span>
+                                                    <span class="text-truncate">الاطباق الجانبية</span>
+                                                </div>
+                                                <br>
+                                                <span>يحتوى على 95 كالوري</span>
+                                                <div class="progress mb-3">
+                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between flex-lg-nowrap">
+                                                    <span class="text-dark fs-6 fw-bold">6.99 ريال سعودي</span>
+                                                    <a href="Detail.html" class="btn border border-secondary rounded-pill text-white" style="background-color: #5B9324;"> إقرأ المزيد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                 
+                                    
+                                  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-5" class="tab-pane fade show p-0">
+                        <div class="row g-4">
+                            <div class="col-lg-12">
+                                <div class="row g-4">
+                            
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="rounded position-relative">
+                                            <div class="fruite-img">
+                                                <img src="assets/images/b98dcd18c90f78b2f1eff83668221528.png" class="img-fluid w-100 rounded-3" alt="" style="height: 250px;width: 250px; object-fit: cover;">
+                                                <div class="item-position" style="position: absolute; top: 10px; right: 10px; border-radius: 50%; padding: 5px;">
+                                                    <a onclick="addToFavorites('طبق السلطة الصحي', '6.99', 'assets/images/b98dcd18c90f78b2f1eff83668221528.png', event)" class="like">
+                                                        <i class="lni lni-heart" style="color: #5B9324;"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="p-3 border border-secondary border-top-0 rounded-bottom">
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="text-dark">طبق السلطة الصحي</span>
+                                                    <span class="text-truncate">الاطباق الجانبية</span>
+                                                </div>
+                                                <br>
+                                                <span>يحتوى على 95 كالوري</span>
+                                                <div class="progress mb-3">
+                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between flex-lg-nowrap">
+                                                    <span class="text-dark fs-6 fw-bold">6.99 ريال سعودي</span>
+                                                    <a href="Detail.html" class="btn border border-secondary rounded-pill text-white" style="background-color: #5B9324;"> إقرأ المزيد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="rounded position-relative">
+                                            <div class="fruite-img">
+                                                <img src="assets/images/b98dcd18c90f78b2f1eff83668221528.png" class="img-fluid w-100 rounded-3" alt="" style="height: 250px;width: 250px; object-fit: cover;">
+                                                <div class="item-position" style="position: absolute; top: 10px; right: 10px; border-radius: 50%; padding: 5px;">
+                                                    <a onclick="addToFavorites('طبق السلطة الصحي', '6.99', 'assets/images/b98dcd18c90f78b2f1eff83668221528.png', event)" class="like">
+                                                        <i class="lni lni-heart" style="color: #5B9324;"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="p-3 border border-secondary border-top-0 rounded-bottom">
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="text-dark">طبق السلطة الصحي</span>
+                                                    <span class="text-truncate">الاطباق الجانبية</span>
+                                                </div>
+                                                <br>
+                                                <span>يحتوى على 95 كالوري</span>
+                                                <div class="progress mb-3">
+                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between flex-lg-nowrap">
+                                                    <span class="text-dark fs-6 fw-bold">6.99 ريال سعودي</span>
+                                                    <a href="Detail.html" class="btn border border-secondary rounded-pill text-white" style="background-color: #5B9324;"> إقرأ المزيد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="rounded position-relative">
+                                            <div class="fruite-img">
+                                                <img src="assets/images/b98dcd18c90f78b2f1eff83668221528.png" class="img-fluid w-100 rounded-3" alt="" style="height: 250px;width: 250px; object-fit: cover;">
+                                                <div class="item-position" style="position: absolute; top: 10px; right: 10px; border-radius: 50%; padding: 5px;">
+                                                    <a onclick="addToFavorites('طبق السلطة الصحي', '6.99', 'assets/images/b98dcd18c90f78b2f1eff83668221528.png', event)" class="like">
+                                                        <i class="lni lni-heart" style="color: #5B9324;"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="p-3 border border-secondary border-top-0 rounded-bottom">
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="text-dark">طبق السلطة الصحي</span>
+                                                    <span class="text-truncate">الاطباق الجانبية</span>
+                                                </div>
+                                                <br>
+                                                <span>يحتوى على 95 كالوري</span>
+                                                <div class="progress mb-3">
+                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between flex-lg-nowrap">
+                                                    <span class="text-dark fs-6 fw-bold">6.99 ريال سعودي</span>
+                                                    <a href="Detail.html" class="btn border border-secondary rounded-pill text-white" style="background-color: #5B9324;"> إقرأ المزيد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="rounded position-relative">
+                                            <div class="fruite-img">
+                                                <img src="assets/images/b98dcd18c90f78b2f1eff83668221528.png" class="img-fluid w-100 rounded-3" alt="" style="height: 250px;width: 250px; object-fit: cover;">
+                                                <div class="item-position" style="position: absolute; top: 10px; right: 10px; border-radius: 50%; padding: 5px;">
+                                                    <a onclick="addToFavorites('طبق السلطة الصحي', '6.99', 'assets/images/b98dcd18c90f78b2f1eff83668221528.png', event)" class="like">
+                                                        <i class="lni lni-heart" style="color: #5B9324;"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="p-3 border border-secondary border-top-0 rounded-bottom">
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="text-dark">طبق السلطة الصحي</span>
+                                                    <span class="text-truncate">الاطباق الجانبية</span>
+                                                </div>
+                                                <br>
+                                                <span>يحتوى على 95 كالوري</span>
+                                                <div class="progress mb-3">
+                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between flex-lg-nowrap">
+                                                    <span class="text-dark fs-6 fw-bold">6.99 ريال سعودي</span>
+                                                    <a href="Detail.html" class="btn border border-secondary rounded-pill text-white" style="background-color: #5B9324;"> إقرأ المزيد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="rounded position-relative">
+                                            <div class="fruite-img">
+                                                <img src="assets/images/b98dcd18c90f78b2f1eff83668221528.png" class="img-fluid w-100 rounded-3" alt="" style="height: 250px;width: 250px; object-fit: cover;">
+                                                <div class="item-position" style="position: absolute; top: 10px; right: 10px; border-radius: 50%; padding: 5px;">
+                                                    <a onclick="addToFavorites('طبق السلطة الصحي', '6.99', 'assets/images/b98dcd18c90f78b2f1eff83668221528.png', event)" class="like">
+                                                        <i class="lni lni-heart" style="color: #5B9324;"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="p-3 border border-secondary border-top-0 rounded-bottom">
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="text-dark">طبق السلطة الصحي</span>
+                                                    <span class="text-truncate">الاطباق الجانبية</span>
+                                                </div>
+                                                <br>
+                                                <span>يحتوى على 95 كالوري</span>
+                                                <div class="progress mb-3">
+                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between flex-lg-nowrap">
+                                                    <span class="text-dark fs-6 fw-bold">6.99 ريال سعودي</span>
+                                                    <a href="Detail.html" class="btn border border-secondary rounded-pill text-white" style="background-color: #5B9324;"> إقرأ المزيد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="rounded position-relative">
+                                            <div class="fruite-img">
+                                                <img src="assets/images/b98dcd18c90f78b2f1eff83668221528.png" class="img-fluid w-100 rounded-3" alt="" style="height: 250px;width: 250px; object-fit: cover;">
+                                                <div class="item-position" style="position: absolute; top: 10px; right: 10px; border-radius: 50%; padding: 5px;">
+                                                    <a onclick="addToFavorites('طبق السلطة الصحي', '6.99', 'assets/images/b98dcd18c90f78b2f1eff83668221528.png', event)" class="like">
+                                                        <i class="lni lni-heart" style="color: #5B9324;"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="p-3 border border-secondary border-top-0 rounded-bottom">
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="text-dark">طبق السلطة الصحي</span>
+                                                    <span class="text-truncate">الاطباق الجانبية</span>
+                                                </div>
+                                                <br>
+                                                <span>يحتوى على 95 كالوري</span>
+                                                <div class="progress mb-3">
+                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between flex-lg-nowrap">
+                                                    <span class="text-dark fs-6 fw-bold">6.99 ريال سعودي</span>
+                                                    <a href="Detail.html" class="btn border border-secondary rounded-pill text-white" style="background-color: #5B9324;"> إقرأ المزيد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                 
+                                    
+                                  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-6" class="tab-pane fade show p-0">
+                        <div class="row g-4">
+                            <div class="col-lg-12">
+                                <div class="row g-4">
+                            
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="rounded position-relative">
+                                            <div class="fruite-img">
+                                                <img src="assets/images/b98dcd18c90f78b2f1eff83668221528.png" class="img-fluid w-100 rounded-3" alt="" style="height: 250px;width: 250px; object-fit: cover;">
+                                                <div class="item-position" style="position: absolute; top: 10px; right: 10px; border-radius: 50%; padding: 5px;">
+                                                    <a onclick="addToFavorites('طبق السلطة الصحي', '6.99', 'assets/images/b98dcd18c90f78b2f1eff83668221528.png', event)" class="like">
+                                                        <i class="lni lni-heart" style="color: #5B9324;"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="p-3 border border-secondary border-top-0 rounded-bottom">
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="text-dark">طبق السلطة الصحي</span>
+                                                    <span class="text-truncate">الاطباق الجانبية</span>
+                                                </div>
+                                                <br>
+                                                <span>يحتوى على 95 كالوري</span>
+                                                <div class="progress mb-3">
+                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between flex-lg-nowrap">
+                                                    <span class="text-dark fs-6 fw-bold">6.99 ريال سعودي</span>
+                                                    <a href="Detail.html" class="btn border border-secondary rounded-pill text-white" style="background-color: #5B9324;"> إقرأ المزيد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="rounded position-relative">
+                                            <div class="fruite-img">
+                                                <img src="assets/images/b98dcd18c90f78b2f1eff83668221528.png" class="img-fluid w-100 rounded-3" alt="" style="height: 250px;width: 250px; object-fit: cover;">
+                                                <div class="item-position" style="position: absolute; top: 10px; right: 10px; border-radius: 50%; padding: 5px;">
+                                                    <a onclick="addToFavorites('طبق السلطة الصحي', '6.99', 'assets/images/b98dcd18c90f78b2f1eff83668221528.png', event)" class="like">
+                                                        <i class="lni lni-heart" style="color: #5B9324;"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="p-3 border border-secondary border-top-0 rounded-bottom">
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="text-dark">طبق السلطة الصحي</span>
+                                                    <span class="text-truncate">الاطباق الجانبية</span>
+                                                </div>
+                                                <br>
+                                                <span>يحتوى على 95 كالوري</span>
+                                                <div class="progress mb-3">
+                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between flex-lg-nowrap">
+                                                    <span class="text-dark fs-6 fw-bold">6.99 ريال سعودي</span>
+                                                    <a href="Detail.html" class="btn border border-secondary rounded-pill text-white" style="background-color: #5B9324;"> إقرأ المزيد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="rounded position-relative">
+                                            <div class="fruite-img">
+                                                <img src="assets/images/b98dcd18c90f78b2f1eff83668221528.png" class="img-fluid w-100 rounded-3" alt="" style="height: 250px;width: 250px; object-fit: cover;">
+                                                <div class="item-position" style="position: absolute; top: 10px; right: 10px; border-radius: 50%; padding: 5px;">
+                                                    <a onclick="addToFavorites('طبق السلطة الصحي', '6.99', 'assets/images/b98dcd18c90f78b2f1eff83668221528.png', event)" class="like">
+                                                        <i class="lni lni-heart" style="color: #5B9324;"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="p-3 border border-secondary border-top-0 rounded-bottom">
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="text-dark">طبق السلطة الصحي</span>
+                                                    <span class="text-truncate">الاطباق الجانبية</span>
+                                                </div>
+                                                <br>
+                                                <span>يحتوى على 95 كالوري</span>
+                                                <div class="progress mb-3">
+                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between flex-lg-nowrap">
+                                                    <span class="text-dark fs-6 fw-bold">6.99 ريال سعودي</span>
+                                                    <a href="Detail.html" class="btn border border-secondary rounded-pill text-white" style="background-color: #5B9324;"> إقرأ المزيد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="rounded position-relative">
+                                            <div class="fruite-img">
+                                                <img src="assets/images/b98dcd18c90f78b2f1eff83668221528.png" class="img-fluid w-100 rounded-3" alt="" style="height: 250px;width: 250px; object-fit: cover;">
+                                                <div class="item-position" style="position: absolute; top: 10px; right: 10px; border-radius: 50%; padding: 5px;">
+                                                    <a onclick="addToFavorites('طبق السلطة الصحي', '6.99', 'assets/images/b98dcd18c90f78b2f1eff83668221528.png', event)" class="like">
+                                                        <i class="lni lni-heart" style="color: #5B9324;"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="p-3 border border-secondary border-top-0 rounded-bottom">
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="text-dark">طبق السلطة الصحي</span>
+                                                    <span class="text-truncate">الاطباق الجانبية</span>
+                                                </div>
+                                                <br>
+                                                <span>يحتوى على 95 كالوري</span>
+                                                <div class="progress mb-3">
+                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between flex-lg-nowrap">
+                                                    <span class="text-dark fs-6 fw-bold">6.99 ريال سعودي</span>
+                                                    <a href="Detail.html" class="btn border border-secondary rounded-pill text-white" style="background-color: #5B9324;"> إقرأ المزيد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="rounded position-relative">
+                                            <div class="fruite-img">
+                                                <img src="assets/images/b98dcd18c90f78b2f1eff83668221528.png" class="img-fluid w-100 rounded-3" alt="" style="height: 250px;width: 250px; object-fit: cover;">
+                                                <div class="item-position" style="position: absolute; top: 10px; right: 10px; border-radius: 50%; padding: 5px;">
+                                                    <a onclick="addToFavorites('طبق السلطة الصحي', '6.99', 'assets/images/b98dcd18c90f78b2f1eff83668221528.png', event)" class="like">
+                                                        <i class="lni lni-heart" style="color: #5B9324;"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="p-3 border border-secondary border-top-0 rounded-bottom">
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="text-dark">طبق السلطة الصحي</span>
+                                                    <span class="text-truncate">الاطباق الجانبية</span>
+                                                </div>
+                                                <br>
+                                                <span>يحتوى على 95 كالوري</span>
+                                                <div class="progress mb-3">
+                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between flex-lg-nowrap">
+                                                    <span class="text-dark fs-6 fw-bold">6.99 ريال سعودي</span>
+                                                    <a href="Detail.html" class="btn border border-secondary rounded-pill text-white" style="background-color: #5B9324;"> إقرأ المزيد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="rounded position-relative">
+                                            <div class="fruite-img">
+                                                <img src="assets/images/b98dcd18c90f78b2f1eff83668221528.png" class="img-fluid w-100 rounded-3" alt="" style="height: 250px;width: 250px; object-fit: cover;">
+                                                <div class="item-position" style="position: absolute; top: 10px; right: 10px; border-radius: 50%; padding: 5px;">
+                                                    <a onclick="addToFavorites('طبق السلطة الصحي', '6.99', 'assets/images/b98dcd18c90f78b2f1eff83668221528.png', event)" class="like">
+                                                        <i class="lni lni-heart" style="color: #5B9324;"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="p-3 border border-secondary border-top-0 rounded-bottom">
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="text-dark">طبق السلطة الصحي</span>
+                                                    <span class="text-truncate">الاطباق الجانبية</span>
+                                                </div>
+                                                <br>
+                                                <span>يحتوى على 95 كالوري</span>
+                                                <div class="progress mb-3">
+                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between flex-lg-nowrap">
+                                                    <span class="text-dark fs-6 fw-bold">6.99 ريال سعودي</span>
+                                                    <a href="Detail.html" class="btn border border-secondary rounded-pill text-white" style="background-color: #5B9324;"> إقرأ المزيد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                 
+                                    
+                                  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-7" class="tab-pane fade show p-0">
+                        <div class="row g-4">
+                            <div class="col-lg-12">
+                                <div class="row g-4">
+                            
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="rounded position-relative">
+                                            <div class="fruite-img">
+                                                <img src="assets/images/b98dcd18c90f78b2f1eff83668221528.png" class="img-fluid w-100 rounded-3" alt="" style="height: 250px;width: 250px; object-fit: cover;">
+                                                <div class="item-position" style="position: absolute; top: 10px; right: 10px; border-radius: 50%; padding: 5px;">
+                                                    <a onclick="addToFavorites('طبق السلطة الصحي', '6.99', 'assets/images/b98dcd18c90f78b2f1eff83668221528.png', event)" class="like">
+                                                        <i class="lni lni-heart" style="color: #5B9324;"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="p-3 border border-secondary border-top-0 rounded-bottom">
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="text-dark">طبق السلطة الصحي</span>
+                                                    <span class="text-truncate">الاطباق الجانبية</span>
+                                                </div>
+                                                <br>
+                                                <span>يحتوى على 95 كالوري</span>
+                                                <div class="progress mb-3">
+                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between flex-lg-nowrap">
+                                                    <span class="text-dark fs-6 fw-bold">6.99 ريال سعودي</span>
+                                                    <a href="Detail.html" class="btn border border-secondary rounded-pill text-white" style="background-color: #5B9324;"> إقرأ المزيد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="rounded position-relative">
+                                            <div class="fruite-img">
+                                                <img src="assets/images/b98dcd18c90f78b2f1eff83668221528.png" class="img-fluid w-100 rounded-3" alt="" style="height: 250px;width: 250px; object-fit: cover;">
+                                                <div class="item-position" style="position: absolute; top: 10px; right: 10px; border-radius: 50%; padding: 5px;">
+                                                    <a onclick="addToFavorites('طبق السلطة الصحي', '6.99', 'assets/images/b98dcd18c90f78b2f1eff83668221528.png', event)" class="like">
+                                                        <i class="lni lni-heart" style="color: #5B9324;"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="p-3 border border-secondary border-top-0 rounded-bottom">
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="text-dark">طبق السلطة الصحي</span>
+                                                    <span class="text-truncate">الاطباق الجانبية</span>
+                                                </div>
+                                                <br>
+                                                <span>يحتوى على 95 كالوري</span>
+                                                <div class="progress mb-3">
+                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between flex-lg-nowrap">
+                                                    <span class="text-dark fs-6 fw-bold">6.99 ريال سعودي</span>
+                                                    <a href="Detail.html" class="btn border border-secondary rounded-pill text-white" style="background-color: #5B9324;"> إقرأ المزيد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="rounded position-relative">
+                                            <div class="fruite-img">
+                                                <img src="assets/images/b98dcd18c90f78b2f1eff83668221528.png" class="img-fluid w-100 rounded-3" alt="" style="height: 250px;width: 250px; object-fit: cover;">
+                                                <div class="item-position" style="position: absolute; top: 10px; right: 10px; border-radius: 50%; padding: 5px;">
+                                                    <a onclick="addToFavorites('طبق السلطة الصحي', '6.99', 'assets/images/b98dcd18c90f78b2f1eff83668221528.png', event)" class="like">
+                                                        <i class="lni lni-heart" style="color: #5B9324;"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="p-3 border border-secondary border-top-0 rounded-bottom">
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="text-dark">طبق السلطة الصحي</span>
+                                                    <span class="text-truncate">الاطباق الجانبية</span>
+                                                </div>
+                                                <br>
+                                                <span>يحتوى على 95 كالوري</span>
+                                                <div class="progress mb-3">
+                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between flex-lg-nowrap">
+                                                    <span class="text-dark fs-6 fw-bold">6.99 ريال سعودي</span>
+                                                    <a href="Detail.html" class="btn border border-secondary rounded-pill text-white" style="background-color: #5B9324;"> إقرأ المزيد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="rounded position-relative">
+                                            <div class="fruite-img">
+                                                <img src="assets/images/b98dcd18c90f78b2f1eff83668221528.png" class="img-fluid w-100 rounded-3" alt="" style="height: 250px;width: 250px; object-fit: cover;">
+                                                <div class="item-position" style="position: absolute; top: 10px; right: 10px; border-radius: 50%; padding: 5px;">
+                                                    <a onclick="addToFavorites('طبق السلطة الصحي', '6.99', 'assets/images/b98dcd18c90f78b2f1eff83668221528.png', event)" class="like">
+                                                        <i class="lni lni-heart" style="color: #5B9324;"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="p-3 border border-secondary border-top-0 rounded-bottom">
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="text-dark">طبق السلطة الصحي</span>
+                                                    <span class="text-truncate">الاطباق الجانبية</span>
+                                                </div>
+                                                <br>
+                                                <span>يحتوى على 95 كالوري</span>
+                                                <div class="progress mb-3">
+                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between flex-lg-nowrap">
+                                                    <span class="text-dark fs-6 fw-bold">6.99 ريال سعودي</span>
+                                                    <a href="Detail.html" class="btn border border-secondary rounded-pill text-white" style="background-color: #5B9324;"> إقرأ المزيد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="rounded position-relative">
+                                            <div class="fruite-img">
+                                                <img src="assets/images/b98dcd18c90f78b2f1eff83668221528.png" class="img-fluid w-100 rounded-3" alt="" style="height: 250px;width: 250px; object-fit: cover;">
+                                                <div class="item-position" style="position: absolute; top: 10px; right: 10px; border-radius: 50%; padding: 5px;">
+                                                    <a onclick="addToFavorites('طبق السلطة الصحي', '6.99', 'assets/images/b98dcd18c90f78b2f1eff83668221528.png', event)" class="like">
+                                                        <i class="lni lni-heart" style="color: #5B9324;"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="p-3 border border-secondary border-top-0 rounded-bottom">
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="text-dark">طبق السلطة الصحي</span>
+                                                    <span class="text-truncate">الاطباق الجانبية</span>
+                                                </div>
+                                                <br>
+                                                <span>يحتوى على 95 كالوري</span>
+                                                <div class="progress mb-3">
+                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between flex-lg-nowrap">
+                                                    <span class="text-dark fs-6 fw-bold">6.99 ريال سعودي</span>
+                                                    <a href="Detail.html" class="btn border border-secondary rounded-pill text-white" style="background-color: #5B9324;"> إقرأ المزيد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="rounded position-relative">
+                                            <div class="fruite-img">
+                                                <img src="assets/images/b98dcd18c90f78b2f1eff83668221528.png" class="img-fluid w-100 rounded-3" alt="" style="height: 250px;width: 250px; object-fit: cover;">
+                                                <div class="item-position" style="position: absolute; top: 10px; right: 10px; border-radius: 50%; padding: 5px;">
+                                                    <a onclick="addToFavorites('طبق السلطة الصحي', '6.99', 'assets/images/b98dcd18c90f78b2f1eff83668221528.png', event)" class="like">
+                                                        <i class="lni lni-heart" style="color: #5B9324;"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="p-3 border border-secondary border-top-0 rounded-bottom">
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="text-dark">طبق السلطة الصحي</span>
+                                                    <span class="text-truncate">الاطباق الجانبية</span>
+                                                </div>
+                                                <br>
+                                                <span>يحتوى على 95 كالوري</span>
+                                                <div class="progress mb-3">
+                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between flex-lg-nowrap">
+                                                    <span class="text-dark fs-6 fw-bold">6.99 ريال سعودي</span>
+                                                    <a href="Detail.html" class="btn border border-secondary rounded-pill text-white" style="background-color: #5B9324;"> إقرأ المزيد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                 
+                                    
+                                  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                     
+                </div> 
+            </div>      
+        </div>
+    </div>
+
+	 
+    <!-- Start Footer Area -->
+    <footer class="footer">
+        <!-- Start Footer Top -->
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <!-- Single Widget -->
+                        <div class="single-footer mobile-app  ">
+                            
+                       
+                             
+                                <img class="logo_footer" src="assets/images/logo/cc6627e592ae17ee34cfc41dacc44bfd.png" alt="logo_footer">
+                                <p >Healthy Park - مطعم يقدم وجبات صحية متوازنة ومحسوبة السعرات بعناية، لتستمتع بمذاق شهي يناسب أسلوب حياتك الصحي.</p>
+                           
+                        </div>
+                        <!-- End Single Widget -->
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <!-- Single Widget -->
+                        <div class="single-footer f-link">
+                            <h3>الروابط السريعة</h3>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <ul>
+                                        <li><a href="#">الصفحة الرئـــيســـية</a></li>
+                                        <li><a href="about.html">من نحــــــن</a></li>
+                                        <li><a href="javascript:void(0)">سياسة الخصوصية</a></li>
+                                        <li><a href="Gallery2.html">جميع الاطباق</a></li>
+                                        <li><a href="Gallery.html">الخالي من الجلوتين</a></li>
+                                    </ul>
+                                </div>
+                               
+                            </div>
+                        </div>   
+                        <!-- End Single Widget -->
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12 ">
+                        <!-- Single Widget -->
+                        <div class="single-footer f-link">
+                            <h3>أطعمة تناسب  حياتك</h3>
+                            <ul>
+                                <li><a href="javascript:void(0)">سندوتشات والبرجر</a></li>
+                                <li><a href="javascript:void(0)">الشوربات والسلطات</a></li>
+                                <li><a href="javascript:void(0)">الاطباق الجانبيه</a></li>
+                                <li><a href="javascript:void(0)">المشروبات</a></li>
+                                <li><a href="javascript:void(0)">الحلى</a></li>
+                            </ul>
+                        </div>
+                        <!-- End Single Widget -->
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12 align-center">
+                        <!-- Single Widget -->
+                        <div class="single-footer f-link">
+                            <h3>للتواصل معنا</h3>
+                            <ul>
+                                <li><a href="javascript:void(0)"> 009666666666</a></li>
+                                <li><a href="javascript:void(0)"> 009666666666</a></li>
+                                <li><a href="javascript:void(0)"> inf@healyh.com</a></li>
+                                <li><a href="javascript:void(0)"></a>inf@healyh.com</li>
+                                <li><a href="javascript:void(0)"></a>السعودية - الرياض</li>
+                            </ul>
+                        </div>
+                        <!-- End Single Widget -->
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <!--/ End Footer Middle -->
+        <!-- Start Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="inner">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="content  ">
+                                <ul class="footer-bottom-links">
+                                    <li><a href="javascript:void(0)">جميع الحقوق محفوظة لشركة الحديقة الصحية 2024</a></li>
+                                   
+                                </ul>
+                                <ul class="footer-bottom-links mt-1">
+                                    <li><a href="javascript:void(0)">تصميم وتطوير ــ  شركة فوتو</a></li>
+                                    <!-- <p class="copyright-text">تصميم وتطوير ــ <a href=""
+                                        rel="nofollow"  >شركة فوتو</a>
+                                </p> -->
+                                </ul>
+                               
+                                <ul class="footer-social">
+                                    <li><a href="javascript:void(0)"><i class="lni lni-facebook-filled"></i></a></li>
+                                    <li><a href="javascript:void(0)"><i class="lni lni-twitter-original"></i></a></li>
+                                    <li><a href="javascript:void(0)"><i class="lni lni-youtube"></i></a></li>
+                                    <li><a href="javascript:void(0)"><i class="lni lni-linkedin-original"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Footer Middle -->
+    </footer>
+   
+
+    <!-- ========================= scroll-top ========================= -->
+    <a href="#" class="scroll-top btn-hover">
+        <i class="lni lni-chevron-up"></i>
+    </a>
+
+    <!-- ========================= JS here ========================= -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/tiny-slider.js"></script>
+    <script src="assets/js/glightbox.min.js"></script>
+          <script src="assets/js/items_home.js"></script>
+         <script src="translation.js"></script>
+    <script src="ar.json"></script>
+    <script src="en.json"></script>
+    <script src="assets/js/main.js"></script>
+          <script src="assets/js/mainn.js"></script>
+     <script>
+        tns({
+            container: '.category-slider',
+            items: 3,
+            slideBy: 'page',
+            autoplay: false,
+            mouseDrag: true,
+            gutter: 0,
+            nav: false,
+            controls: true,
+            controlsText: ['<i class="lni lni-chevron-left"></i>', '<i class="lni lni-chevron-right"></i>'],
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                540: {
+                    items: 2,
+                },
+                768: {
+                    items: 4,
+                },
+                992: {
+                    items: 5,
+                },
+                1170: {
+                    items: 6,
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>     

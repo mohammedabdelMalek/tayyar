@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Healthy Park</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.svg" />
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- Web Font -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    
+        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+ 
+    <!-- ========================= CSS here ========================= -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/LineIcons.2.0.css" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="assets/css/tiny-slider.css" />
+    <link rel="stylesheet" href="assets/css/glightbox.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+</head>
+<body>
+
+ 
+ 
+
+    <div class="cart">
+        <div class="top_cart">
+            <h3>Cart Items : <span class="Count_item_cart">0</span></h3>
+            <span onclick="open_close_cart()" class="close_cart"><i class="fa-regular fa-circle-xmark"></i></span>
+        </div>
+
+
+        <div class="items_in_cart" id="cart_items">
+
+
+
+        </div>
+
+
+        <div class="bottom_cart">
+            <div class="total">
+                <p>subtotal</p>
+                <p class="price_cart_toral">$0</p>
+            </div>
+
+            <div class="button_cart">
+                <a href="#" class="btn_cart btn">Checkout</a>
+                <span onclick="open_close_cart()" class="btn_cart trans_bg btn">Shop More</span>
+            </div>
+        </div>
+
+    </div>
+    <!--[if lte IE 9]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+        your experience and security.
+      </p>
+    <![endif]-->
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- /End Preloader -->
+
+    <!-- Start Header Area -->
+    <header class="header navbar-area">
+        <div class="container">
+            <div class="row g-0 align-items-center">
+                <div class="col-md-12">
+                    <div class="nav-inner">
+                        <nav class="navbar navbar-expand-lg">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="assets/images/logo/cc6627e592ae17ee34cfc41dacc44bfd.png" alt="Logo">
+                            </a>
+                            <button class="navbar-toggler mobile-menu-btn" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                <ul id="nav" class="navbar-nav ms-auto">
+                                    <li class="nav-item">
+                                        <a id="home" class="active nav-link" href="index.html">الصفحة الرئيسية</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a id="FoodMenu" class="nav-link" href="Gallery2.html"> قائمة الأطعمة </a>
+                                        <ul class="sub-menu collapse" id="submenu-1-3">
+                                            <li class="nav-item"><a href="Gallery2.html">جميع الاطباق</a></li>
+                                            <li class="nav-item"><a href="Gallery.html">الخالي من الجلوتين</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a id="about_us" class="nav-link" href="about.html">من نــحن </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a  id="Contact_us" class="nav-link" href="Contact us.html">تواصل معنا</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a id="ourlocation" class="nav-link" href="our location.html"> موقعنا</a>
+                                    </li>
+                                    <li id="langToggle" class="nav-item">
+                                        <a class="nav-link" onclick="toggleLanguage()" role="button">
+                                            <img id="flagIcon" class="bg-white" src="assets/images/flags/sud.png" alt="العربية" style="width:18px;height:15px;margin-top:5px;">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                         
+                            
+                            <div class="login-button d-none d-lg-flex"> <!-- Visible only on large screens -->
+                                <a onclick="favoritesIcon()" class="like position-relative text-white">
+                                    <i id="favoritesIcon" class="lni lni-heart"></i>
+                                </a>
+                                <a class="like text-white">
+                                    <i class="lni lni-search-alt"></i>
+                                </a>
+                            </div>
+    
+                            <div class="d-flex d-lg-none"> <!-- Visible only on small screens -->
+                                <a onclick="favoritesIcon()" class="like text-white me-2">
+                                    <i id="favoritesIcon" class="lni lni-heart"></i>
+                                </a>
+                                <a class="like text-white">
+                                    <i class="lni lni-search-alt"></i>
+                                </a>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+
+    <div class="breadcrumbs">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                     <div class="breadcrumbs-content inner-content">
+                        <h1 class="text-center  display-5 text-white display-2 fw-bold bg-transparent">   تواصل معنا   </h1>
+                    </div>
+            
+            </div>
+        </div>
+    </div>
+
+ 
+  
+        <div class="container contact-us py-5">
+            <div class="container py-5">
+                <div class="d-flex justify-content-center">
+         
+             
+                    <div class="row g-4">
+                    
+                
+                     
+                        <div class="col-lg-4"style="width:270px;height:246px;top:736px;left:935px;gap:0px;border-radius:5px 0px 0px 0px;opacity:1px;">
+
+                            <div class="d-flex justify-content-between flex-column  align-center text-center bg-light w-100 h-100 border-bottom border-primary p-4 rounded"style="width: 100px;height: 100px;top: 759px;left: 1070px;gap: 0px;opacity: 0px;">
+                                <i class="fas fa-map-marker-alt fa-2x me-1  align-center"
+                                style="
+                                
+                              
+                            
+                                color: var(--Primary, rgba(91, 147, 36, 1));
+
+                                
+                                "
+                                
+                                
+                                
+                                ></i>
+                                <div>
+                                    <h4 class="fs-4 align-center" style="font-size: 36px;">الموقع</h4>
+                                    <p class="mb-3"> السعودية, جدة </p>
+                                    <p class="mb-3 fs-6"> 122 </p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4"style="width:270px;height:246px;top:736px;left:935px;gap:0px;border-radius:5px 0px 0px 0px;opacity:1px;">
+                            <div class="d-flex justify-content-between flex-column  align-center text-center bg-light w-100 h-100 border-bottom border-primary p-4 rounded"style="width: 100px;height: 100px;top: 759px;left: 1070px;gap: 0px;opacity: 0px;">
+                                <i class="fas fa-envelope fa-2x  me-4  align-center"
+                                style="
+                                
+                               
+                            
+                                color: var(--Primary, rgba(91, 147, 36, 1));
+
+                                
+                                "
+                                
+                                
+                                
+                                ></i>
+                                <div>
+                                    <h4 class="fs-4 align-center" style="font-size:36px;">البريد الإلكتروني</h4>
+                                    <p class="mb-0 align-center"style="font-size:14px;color: var(--Gray, rgba(112, 112, 112, 1));">info@example.com</p>
+                                    <p class="mb-0 align-center" style="font-size:14px;color: var(--Gray, rgba(112, 112, 112, 1));">contact@healthypark.com</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4"style="width:270px;height:246px;top:736px;left:935px;gap:0px;border-radius:5px 0px 0px 0px;opacity:1px;">
+                            <div class="d-flex justify-content-between flex-column  align-center text-center bg-light w-100 h-100 border-bottom border-primary p-4 rounded"style="width: 100px;height: 100px;top: 759px;left: 1070px;gap: 0px;opacity: 0px;">
+                                <i class="fa fa-phone-alt fa-2x   me-4  align-center"
+                                style="
+                                
+                              
+                            
+                                color: var(--Primary, rgba(91, 147, 36, 1));
+
+                                
+                                "
+                                
+                                
+                                
+                                ></i>
+                                <div style="font-size: 36px;">
+                                    <h4 class="fs-4 align-center" style="font-size: 36px;">رقم الهاتف </h4>
+
+                                    <p class="mb-0  align-center"style="font-size:13px;color: var(--Gray, rgba(112, 112, 112, 1));"">+123 456 789 10</p>
+                                    <p class="mb-0  align-center"style="font-size:13px;color: var(--Gray, rgba(112, 112, 112, 1));"">+123 456 789 10</p>
+                                </div>
+                            </div>
+                        </div>
+                
+              
+          
+        </div>
+    </div>
+            </div>
+            </div>
+      
+        
+    <div class="container contact py-5">
+        <div class="container py-5">
+            <div class="rounded">
+                <div class="row g-4">
+                    <div class="col-12">
+                        <div class="text-center mx-auto" style="max-width: 700px;font-family: Almarai;">
+  
+
+
+                            <h1 class="fs-1"style="color:rgba(91, 147, 36, 1);">شاركنا بأي فكرةتخطر<br>  في بالك!</h1>
+                          </div>
+                    </div>
+                    
+                     <!-- Multiple inputs -->
+                     <div class="appointment-form p-5">
+                     
+                        <form>
+                            <div class="row gy-3 gx-4">
+                                <div class="col-lg-6">
+                                    <input type="email" class="form-control py-3 border-success rounded bg-transparent text-dark" placeholder="اسم الاول">
+                                </div>
+                                <div class="col-lg-6">
+                                    <input type="email" class="form-control py-3 border-success rounded  bg-transparent text-dark" placeholder="اسم العائله">
+                                </div>
+                                <div class="col-lg-6">
+                                    <input type="email" class="form-control py-3 border-success rounded  bg-transparent text-dark" placeholder="  رقم الجوال">
+
+                                </div>
+                                <div class="col-lg-6">
+                                    <input type="email" class="form-control py-3 border-success rounded  bg-transparent text-dark" placeholder=" البريد الالكتروني">
+                                </div>
+                                <div class="col-lg-12">
+                                    <textarea class="form-control border-success rounded bg-transparent text-dark" name="text" id="area-text" cols="30" rows="5" placeholder="رسالتك"></textarea>
+                                </div>
+                                <div class="col-lg-12">
+                                    <button type="button" class="btn btn-success rounded btn-primary-outline-0 w-100 py-3 px-5" style="background-color: rgba(91, 147, 36, 1);">ارسال</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                      
+                  
+         
+                        </div>
+                    </div>
+                </div>
+            </div>
+     
+ 
+
+	 
+    <!-- Start Footer Area -->
+    <footer class="footer">
+        <!-- Start Footer Top -->
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <!-- Single Widget -->
+                        <div class="single-footer mobile-app  ">
+                            
+                       
+                             
+                                <img class="logo_footer" src="assets/images/logo/cc6627e592ae17ee34cfc41dacc44bfd.png" alt="logo_footer">
+                                <p >Healthy Park - مطعم يقدم وجبات صحية متوازنة ومحسوبة السعرات بعناية، لتستمتع بمذاق شهي يناسب أسلوب حياتك الصحي.</p>
+                           
+                        </div>
+                        <!-- End Single Widget -->
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <!-- Single Widget -->
+                        <div class="single-footer f-link">
+                            <h3>الروابط السريعة</h3>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <ul>
+                                        <li><a href="#">الصفحة الرئـــيســـية</a></li>
+                                        <li><a href="about.html">من نحــــــن</a></li>
+                                        <li><a href="javascript:void(0)">سياسة الخصوصية</a></li>
+                                        <li><a href="Gallery2.html">جميع الاطباق</a></li>
+                                        <li><a href="Gallery.html">الخالي من الجلوتين</a></li>
+                                    </ul>
+                                </div>
+                               
+                            </div>
+                        </div>   
+                        <!-- End Single Widget -->
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12 ">
+                        <!-- Single Widget -->
+                        <div class="single-footer f-link">
+                            <h3>أطعمة تناسب  حياتك</h3>
+                            <ul>
+                                <li><a href="javascript:void(0)">سندوتشات والبرجر</a></li>
+                                <li><a href="javascript:void(0)">الشوربات والسلطات</a></li>
+                                <li><a href="javascript:void(0)">الاطباق الجانبيه</a></li>
+                                <li><a href="javascript:void(0)">المشروبات</a></li>
+                                <li><a href="javascript:void(0)">الحلى</a></li>
+                            </ul>
+                        </div>
+                        <!-- End Single Widget -->
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12 align-center">
+                        <!-- Single Widget -->
+                        <div class="single-footer f-link">
+                            <h3>للتواصل معنا</h3>
+                            <ul>
+                                <li><a href="javascript:void(0)"> 009666666666</a></li>
+                                <li><a href="javascript:void(0)"> 009666666666</a></li>
+                                <li><a href="javascript:void(0)"> inf@healyh.com</a></li>
+                                <li><a href="javascript:void(0)"></a>inf@healyh.com</li>
+                                <li><a href="javascript:void(0)"></a>السعودية - الرياض</li>
+                            </ul>
+                        </div>
+                        <!-- End Single Widget -->
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <!--/ End Footer Middle -->
+        <!-- Start Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="inner">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="content  ">
+                                <ul class="footer-bottom-links">
+                                    <li><a href="javascript:void(0)">جميع الحقوق محفوظة لشركة الحديقة الصحية 2024</a></li>
+                                   
+                                </ul>
+                                <ul class="footer-bottom-links mt-1">
+                                    <li><a href="javascript:void(0)">تصميم وتطوير ــ  شركة فوتو</a></li>
+                                    <!-- <p class="copyright-text">تصميم وتطوير ــ <a href=""
+                                        rel="nofollow"  >شركة فوتو</a>
+                                </p> -->
+                                </ul>
+                               
+                                <ul class="footer-social">
+                                    <li><a href="javascript:void(0)"><i class="lni lni-facebook-filled"></i></a></li>
+                                    <li><a href="javascript:void(0)"><i class="lni lni-twitter-original"></i></a></li>
+                                    <li><a href="javascript:void(0)"><i class="lni lni-youtube"></i></a></li>
+                                    <li><a href="javascript:void(0)"><i class="lni lni-linkedin-original"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Footer Middle -->
+    </footer>
+   
+
+    <!-- ========================= scroll-top ========================= -->
+    <a href="#" class="scroll-top btn-hover">
+        <i class="lni lni-chevron-up"></i>
+    </a>
+
+    <!-- ========================= JS here ========================= -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/tiny-slider.js"></script>
+    <script src="assets/js/glightbox.min.js"></script>
+          <script src="assets/js/items_home.js"></script>
+         <script src="translation.js"></script>
+    <script src="ar.json"></script>
+    <script src="en.json"></script>
+    <script src="assets/js/main.js"></script>
+          <script src="assets/js/mainn.js"></script>
+     <script>
+        tns({
+            container: '.category-slider',
+            items: 3,
+            slideBy: 'page',
+            autoplay: false,
+            mouseDrag: true,
+            gutter: 0,
+            nav: false,
+            controls: true,
+            controlsText: ['<i class="lni lni-chevron-left"></i>', '<i class="lni lni-chevron-right"></i>'],
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                540: {
+                    items: 2,
+                },
+                768: {
+                    items: 4,
+                },
+                992: {
+                    items: 5,
+                },
+                1170: {
+                    items: 6,
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>     

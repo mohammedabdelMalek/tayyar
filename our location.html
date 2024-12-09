@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Healthy Park</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.svg" />
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- Web Font -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    
+        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+ 
+    <!-- ========================= CSS here ========================= -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/LineIcons.2.0.css" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="assets/css/tiny-slider.css" />
+    <link rel="stylesheet" href="assets/css/glightbox.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+</head>
+<body>
+
+ 
+ 
+
+    <div class="cart">
+        <div class="top_cart">
+            <h3>Cart Items : <span class="Count_item_cart">0</span></h3>
+            <span onclick="open_close_cart()" class="close_cart"><i class="fa-regular fa-circle-xmark"></i></span>
+        </div>
+
+
+        <div class="items_in_cart" id="cart_items">
+
+
+
+        </div>
+
+
+        <div class="bottom_cart">
+            <div class="total">
+                <p>subtotal</p>
+                <p class="price_cart_toral">$0</p>
+            </div>
+
+            <div class="button_cart">
+                <a href="#" class="btn_cart btn">Checkout</a>
+                <span onclick="open_close_cart()" class="btn_cart trans_bg btn">Shop More</span>
+            </div>
+        </div>
+
+    </div>
+    <!--[if lte IE 9]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+        your experience and security.
+      </p>
+    <![endif]-->
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- /End Preloader -->
+
+    <!-- Start Header Area -->
+    <header class="header navbar-area">
+        <div class="container">
+            <div class="row g-0 align-items-center">
+                <div class="col-md-12">
+                    <div class="nav-inner">
+                        <nav class="navbar navbar-expand-lg">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="assets/images/logo/cc6627e592ae17ee34cfc41dacc44bfd.png" alt="Logo">
+                            </a>
+                            <button class="navbar-toggler mobile-menu-btn" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                <ul id="nav" class="navbar-nav ms-auto">
+                                    <li class="nav-item">
+                                        <a id="home" class="active nav-link" href="index.html">الصفحة الرئيسية</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a id="FoodMenu" class="nav-link" href="Gallery2.html"> قائمة الأطعمة </a>
+                                        <ul class="sub-menu collapse" id="submenu-1-3">
+                                            <li class="nav-item"><a href="Gallery2.html">جميع الاطباق</a></li>
+                                            <li class="nav-item"><a href="Gallery.html">الخالي من الجلوتين</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a id="about_us" class="nav-link" href="about.html">من نــحن </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a  id="Contact_us" class="nav-link" href="Contact us.html">تواصل معنا</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a id="ourlocation" class="nav-link" href="our location.html"> موقعنا</a>
+                                    </li>
+                                    <li id="langToggle" class="nav-item">
+                                        <a class="nav-link" onclick="toggleLanguage()" role="button">
+                                            <img id="flagIcon" class="bg-white" src="assets/images/flags/sud.png" alt="العربية" style="width:18px;height:15px;margin-top:5px;">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                         
+                            
+                            <div class="login-button d-none d-lg-flex"> <!-- Visible only on large screens -->
+                                <a onclick="favoritesIcon()" class="like position-relative text-white">
+                                    <i id="favoritesIcon" class="lni lni-heart"></i>
+                                </a>
+                                <a class="like text-white">
+                                    <i class="lni lni-search-alt"></i>
+                                </a>
+                            </div>
+    
+                            <div class="d-flex d-lg-none"> <!-- Visible only on small screens -->
+                                <a onclick="favoritesIcon()" class="like text-white me-2">
+                                    <i id="favoritesIcon" class="lni lni-heart"></i>
+                                </a>
+                                <a class="like text-white">
+                                    <i class="lni lni-search-alt"></i>
+                                </a>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+
+
+    <div class="breadcrumbs">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                     <div class="breadcrumbs-content inner-content">
+                        <h1 class="text-center display-5 text-white display-2 fw-bold bg-transparent">   موقعنا   </h1>
+                    </div>
+            
+            </div>
+        </div>
+    </div>
+ 
+    <div class="container">
+        <div class="container py-5">
+            <div class="p-5 rounded position-relative"> <!-- أضف position-relative هنا -->
+                <div class="col-lg-12">
+                    <div class="h-100 rounded">
+                        <iframe class="rounded w-100" 
+                            style="height:500px;" 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387191.33750346623!2d-73.97968099999999!3d40.6974881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1694259649153!5m2!1sen!2sbd" 
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <!-- المستطيل هنا -->
+                        <div class="overlay-rectangle">
+                            <h3>Healthy Park</h3>
+                            <p class="gold">شركة الحديقة الصحية</p>
+                            <h3>Healthy Park</h3>
+                            <p class="gold">السعودية, الرياض 122</p>
+                            <h3>رقم الهاتف</h3>
+                            <p class="gold">+123 456 789 10</p>
+                            <h3>الموقع الإلكتروني</h3>
+                            <p class="gold">http://healthypark.com/</p>
+                        </div>
+                        
+                        <style>
+                            .overlay-rectangle {
+                                font-size: 20px !important;
+
+                                position: absolute; /* اجعل الموقع مطلق */
+        top: 20px; /* المسافة من الأعلى */
+        right: 20px; /* المسافة من اليمين */
+        background-color: rgba(255, 255, 255, 0.8); /* لون خلفية مع شفافية */
+        border-radius: 10px; /* زوايا مستديرة */
+        padding: 15px !important; /* تباعد داخلي */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* ظل */
+        width: 250px; /* عرض المستطيل */
+        overflow: hidden; /* لإخفاء المحتوى الزائد */
+        max-height: 400px; /* ضبط ارتفاع أقصى للمستطيل */
+                            }
+                           .overlay-rectangle h3 {
+                                margin:6px 0 !important;
+                            
+                                color: goldenrod; 
+ font-family: Almarai;
+font-size: 14px !important;
+font-weight: 700;
+line-height: 48px;
+text-align: center;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+padding:1px;
+
+ 
+                            }
+                            .gold {
+                                margin-top:10px;
+                                margin:5px 0 !important;
+
+                                font-family: Almarai !important;
+font-size: 14px !important;
+font-weight: 700;
+ text-align: center;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+  color:#fff !important; /* لون النص للفقرات */
+                              
+ 
+
+                            }
+                        </style>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+
+    </div>
+    
+    <style>
+        .overlay-rectangle {
+            position: absolute; /* اجعل الموقع مطلق */
+            top:100px; /* المسافة من الأعلى */
+            right: 100px; /* المسافة من اليمين */
+            background-color:#5B9324;
+            /* لون خلفية مع شفافية */
+            border-radius: 10px; /* زوايا مستديرة */
+            padding: 15px; /* تباعد داخلي */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* ظل */
+            width: 250px; /* عرض المستطيل (يمكنك تغييره) */
+            height:382px;
+        }
+        .overlay-rectangle .p{
+          color:goldenrod;
+         
+        }
+    </style>
+   
+  <!-- Start Footer Area -->
+  <footer class="footer">
+    <!-- Start Footer Top -->
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-12">
+                    <!-- Single Widget -->
+                    <div class="single-footer mobile-app  ">
+                        
+                   
+                         
+                            <img class="logo_footer" src="assets/images/logo/cc6627e592ae17ee34cfc41dacc44bfd.png" alt="logo_footer">
+                            <p >Healthy Park - مطعم يقدم وجبات صحية متوازنة ومحسوبة السعرات بعناية، لتستمتع بمذاق شهي يناسب أسلوب حياتك الصحي.</p>
+                       
+                    </div>
+                    <!-- End Single Widget -->
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <!-- Single Widget -->
+                    <div class="single-footer f-link">
+                        <h3>الروابط السريعة</h3>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-12">
+                                <ul>
+                                    <li><a href="#">الصفحة الرئــيسـية</a></li>
+                                    <li><a href="about.html">من نحن</a></li>
+                                    <li><a href="javascript:void(0)">سياسة الخصوصية</a></li>
+                                    <li><a href="Gallery2.html">جميع الاطباق</a></li>
+                                    <li><a href="Gallery.html">الخالي من الجلوتين</a></li>
+                                </ul>
+                            </div>
+                           
+                        </div>
+                    </div>   
+                    <!-- End Single Widget -->
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 ">
+                    <!-- Single Widget -->
+                    <div class="single-footer f-link">
+                        <h3>أطعمة تناسب  حياتك</h3>
+                        <ul>
+                            <li><a href="javascript:void(0)">سندوتشات والبرجر</a></li>
+                            <li><a href="javascript:void(0)">الشوربات والسلطات</a></li>
+                            <li><a href="javascript:void(0)">الاطباق الجانبيه</a></li>
+                            <li><a href="javascript:void(0)">المشروبات</a></li>
+                            <li><a href="javascript:void(0)">الحلى</a></li>
+                        </ul>
+                    </div>
+                    <!-- End Single Widget -->
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 align-center">
+                    <!-- Single Widget -->
+                    <div class="single-footer f-link">
+                        <h3>للتواصل معنا</h3>
+                        <ul>
+                            <li><a href="javascript:void(0)"> 009666666666</a></li>
+                            <li><a href="javascript:void(0)"> 009666666666</a></li>
+                            <li><a href="javascript:void(0)"> inf@healyh.com</a></li>
+                            <li><a href="javascript:void(0)"></a>inf@healyh.com</li>
+                            <li><a href="javascript:void(0)"></a>السعودية - الرياض</li>
+                        </ul>
+                    </div>
+                    <!-- End Single Widget -->
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!--/ End Footer Middle -->
+    <!-- Start Footer Bottom -->
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="inner">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="content  ">
+                            <ul class="footer-bottom-links">
+                                <li><a href="javascript:void(0)">جميع الحقوق محفوظة لشركة الحديقة الصحية 2024</a></li>
+                               
+                            </ul>
+                            <ul class="footer-bottom-links mt-1">
+                                <li><a href="javascript:void(0)">تصميم وتطوير ــ  شركة فوتو</a></li>
+                                <!-- <p class="copyright-text">تصميم وتطوير ــ <a href=""
+                                    rel="nofollow"  >شركة فوتو</a>
+                            </p> -->
+                            </ul>
+                           
+                            <ul class="footer-social">
+                                <li><a href="javascript:void(0)"><i class="lni lni-facebook-filled"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="lni lni-twitter-original"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="lni lni-youtube"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="lni lni-linkedin-original"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Footer Middle -->
+</footer>
+
+   
+
+    <!-- ========================= scroll-top ========================= -->
+    <a href="#" class="scroll-top btn-hover">
+        <i class="lni lni-chevron-up"></i>
+    </a>
+
+    <!-- ========================= JS here ========================= -->
+    <script src="assets/js/bootstrap.min.js"></script>
+ 
+          <script src="assets/js/items_home.js"></script>
+         <script src="translation.js"></script>
+    <script src="ar.json"></script>
+    <script src="en.json"></script>
+    <script src="assets/js/main.js"></script>
+          <script src="assets/js/mainn.js"></script>
+     <script>
+        tns({
+            container: '.category-slider',
+            items: 3,
+            slideBy: 'page',
+            autoplay: false,
+            mouseDrag: true,
+            gutter: 0,
+            nav: false,
+            controls: true,
+            controlsText: ['<i class="lni lni-chevron-left"></i>', '<i class="lni lni-chevron-right"></i>'],
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                540: {
+                    items: 2,
+                },
+                768: {
+                    items: 4,
+                },
+                992: {
+                    items: 5,
+                },
+                1170: {
+                    items: 6,
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>     

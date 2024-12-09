@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+
+<head>
+   
+    <title>Healthy Park</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.svg" />
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- Web Font -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="../../assets/vendor/aos/dist/aos.css">
+        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+ 
+    <!-- ========================= CSS here ========================= -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/LineIcons.2.0.css" />
+      <link rel="stylesheet" href="assets/css/glightbox.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+</head>
+<body>
+
+ 
+ 
+
+    <div class="cart">
+        <div class="top_cart">
+            <h3>Cart Items : <span class="Count_item_cart">0</span></h3>
+            <span onclick="open_close_cart()" class="close_cart"><i class="fa-regular fa-circle-xmark"></i></span>
+        </div>
+
+
+        <div class="items_in_cart" id="cart_items">
+
+
+
+        </div>
+
+
+        <div class="bottom_cart">
+            <div class="total">
+                <p>subtotal</p>
+                <p class="price_cart_toral">$0</p>
+            </div>
+
+            <div class="button_cart">
+                <a href="#" class="btn_cart btn">Checkout</a>
+                <span onclick="open_close_cart()" class="btn_cart trans_bg btn">Shop More</span>
+            </div>
+        </div>
+
+    </div>
+    <!--[if lte IE 9]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+        your experience and security.
+      </p>
+    <![endif]-->
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- /End Preloader -->
+
+    <!-- Start Header Area -->
+    <header class="header navbar-area">
+        <div class="container">
+            <div class="row g-0 align-items-center">
+                <div class="col-md-12">
+                    <div class="nav-inner">
+                        <nav class="navbar navbar-expand-lg">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="assets/images/logo/cc6627e592ae17ee34cfc41dacc44bfd.png" alt="Logo">
+                            </a>
+                            <button class="navbar-toggler mobile-menu-btn" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                <ul id="nav" class="navbar-nav ms-auto">
+                                    <li class="nav-item">
+                                        <a id="home" class="active nav-link" href="index.html">الصفحة الرئيسية</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a id="FoodMenu" class="nav-link" href="Gallery2.html"> قائمة الأطعمة </a>
+                                        <ul class="sub-menu collapse" id="submenu-1-3">
+                                            <li class="nav-item"><a href="Gallery2.html">جميع الاطباق</a></li>
+                                            <li class="nav-item"><a href="Gallery.html">الخالي من الجلوتين</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a id="about_us" class="nav-link" href="about.html">من نــحن </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a  id="Contact_us" class="nav-link" href="Contact us.html">تواصل معنا</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a id="ourlocation" class="nav-link" href="our location.html"> موقعنا</a>
+                                    </li>
+                                    <li id="langToggle" class="nav-item">
+                                        <a class="nav-link" onclick="toggleLanguage()" role="button">
+                                            <img id="flagIcon" class="bg-white" src="assets/images/flags/sud.png" alt="العربية" style="width:18px;height:15px;margin-top:5px;">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                         
+                            
+                            <div class="login-button d-none d-lg-flex"> <!-- Visible only on large screens -->
+                                <a onclick="favoritesIcon()" class="like position-relative text-white">
+                                    <i id="favoritesIcon" class="lni lni-heart"></i>
+                                </a>
+                                <a class="like text-white">
+                                    <i class="lni lni-search-alt"></i>
+                                </a>
+                            </div>
+    
+                            <div class="d-flex d-lg-none"> <!-- Visible only on small screens -->
+                                <a onclick="favoritesIcon()" class="like text-white me-2">
+                                    <i id="favoritesIcon" class="lni lni-heart"></i>
+                                </a>
+                                <a class="like text-white">
+                                    <i class="lni lni-search-alt"></i>
+                                </a>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+  
+    
+     
+    
+      <!-- نافذة قائمة المفضلة -->
+      <div id="favorites">
+        <div class="header">
+          <span>قائمة المفضلة</span>
+          <button id="closeFavorites">×</button>
+        </div>
+        <div class="content" id="favoritesContent">
+          <!-- سيتم إضافة المنتجات هنا -->
+        </div>
+      </div>
+    
+
+ 
+<!-- <section class="hero-section" id="heroSection" style="background-image: url('assets/images/her2.jpg'); background-size: 67% auto; background-position: left; height: 100vh; background-repeat: no-repeat;">
+    <div class="container">
+        <div class="row align-items-center p-5">
+            <div class="col-lg-6 col-md-12 text-white d-flex justify-content-center flex-column"> 
+                <span class="hastg text-center p-2 m-1" id="welcome_message">
+                    1#خيارك الصحي الأمثل
+                </span>
+                <h2 id="healthyvariety" class="fw-bold text-success display-5">تنوع صحي يناسب كل الأذواق والاحتياجات!</h2>
+                <p id="Enjoyhealthy" class="fs-5 text-muted">
+                    <br/>
+                    استمتع بمذاق صحي ومتوازن مع Healthy
+                    <br/>
+                    Park - طعام صحي، محسوب السعرات، ومعدّ خصيصًا لصحتك!
+                </p>
+            </div>
+        </div>
+    </div>
+    
+</section> -->
+
+
+ 
+
+<section id="heroCarousel"   class="carousel slide  hero-section"  data-bs-ride="carousel" >
+<div class="carousel-inner">
+    <div class="carousel-item active"id="heroSection"  style="background-image: url('assets/images/her2.jpg'); background-size: 67% auto; background-position: left; height: 100vh; background-repeat: no-repeat;">
+        <div class="container">
+            <div class="row align-items-center p-5">
+                <div class="col-lg-6 col-md-12 text-white d-flex justify-content-center flex-column"> 
+                    <span class="hastg text-center p-2 mt-5" id="welcome_message">
+                        1#خيارك الصحي الأمثل
+                    </span>
+                    <h2 id="healthyvariety" class="fw-bold text-success display-5">تنوع صحي يناسب كل الأذواق والاحتياجات!</h2>
+                    <p id="Enjoyhealthy" class="fs-5 text-muted hidden">
+                        <br/>
+                        استمتع بمذاق صحي ومتوازن مع Healthy
+                        <br/>
+                        Park - طعام صحي، محسوب السعرات، ومعدّ خصيصًا لصحتك!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="carousel-item "id="heroSectionn" style="background-image: url('assets/images/her2.jpg');  background-size: 67% auto; background-position: left; height: 100vh; background-repeat: no-repeat;">
+        <div class="container">
+            <div class="row align-items-center p-5 mt-5">
+                <div class="col-lg-6 col-md-12 text-white d-flex justify-content-center flex-column"> 
+                    <span class="hastg text-center p-2 m-1" id="welcome_message">
+                        1#خيارك الصحي الأمثل
+                    </span>
+                    <h2 id="healthyvariety" class="fw-bold text-success display-5">تنوع صحي يناسب كل الأذواق والاحتياجات!</h2>
+                    <p id="Enjoyhealthy" class="fs-5 text-muted hidden">
+                        <br/>
+                        استمتع بمذاق صحي ومتوازن مع Healthy
+                        <br/>
+                        Park - طعام صحي، محسوب السعرات، ومعدّ خصيصًا لصحتك!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="carousel-item  "id="heroSectionnn"  style="background-image: url('assets/images/her2.jpg'); background-size: 67% auto; background-position: left; height: 100vh; background-repeat: no-repeat;">
+        <div class="container">
+            <div class="row align-items-center p-5 mt-5">
+                <div class="col-lg-6 col-md-12 text-white d-flex justify-content-center flex-column"> 
+                    <span class="hastg text-center p-2 m-1" id="welcome_message">
+                        1#خيارك الصحي الأمثل
+                    </span>
+                    <h2 id="healthyvariety" class="fw-bold text-success display-5">تنوع صحي يناسب كل الأذواق والاحتياجات!</h2>
+                    <p id="Enjoyhealthy" class="fs-5 text-muted hidden">
+                        <br/>
+                        استمتع بمذاق صحي ومتوازن مع Healthy
+                        <br/>
+                        Park - طعام صحي، محسوب السعرات، ومعدّ خصيصًا لصحتك!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">السابق</span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">التالي</span>
+</button>
+</section>
+
+
+
+
+
+
+ <section class="circular-section" style="background-color:#FFFDEE";>
+      
+       
+    
+ 
+
+    </section> 
+  
+  <section class="items-grid" style="background-color: #FFFDEE !important;"> 
+        <div class="container">
+            <div class="row align-items-center">
+            
+              
+              <div class="col-lg-6 col-md-6 col-12 align-center">
+                  <h2 id="Whychoose" class="fw-bold ">
+
+                    لماذا تختارنا
+                    <br/>
+                    للحصول على 
+                    <span>طعام صحي؟</span>
+                  </h2>
+                 
+              </div>
+                
+              
+               <div class="col-lg-6 col-md-6 col-12 align-center text-center">
+            
+
+               <p id="BecausetHealthy">"لأننا في Healthy Park نقدم لك وجبات صحية
+                <br/>
+                 طازجة، محسوبة السعرات، ومعدة بعناية
+                 <br/>
+
+                  لتناسب أسلوب حياتك الصحي، مع تنوع يناسب 
+                  <br/>
+
+                  جميع الأذواق والاحتياجات."</p>
+              </div>
+                </div>
+        </div>
+ 
+      </section> 
+
+    
+  
+
+<div class="container section">
+    <div class="row text-center">
+        <div class="col-md-4 d-flex justify-content-center">
+            <div class="card">
+                <div class="icon-container">
+                    <img src="assets/images/fff.png" style="width:80px;height:80px; object-fit: cover;">
+                    <!-- <i class="fa-solid fa-flask" style="color:#5B9324;"></i> -->
+                 </div>
+                <div class="card-containt">
+            
+                <h3 id="Wespecialize">نتميز بتحضير وجبات طازجة</h3>
+                <p>يضم مطعمنا مجموعة من الوجبات الصحية المحضرة طازجة يوميا مختارة لكم بعناية</p>
+              
+            </div>
+            <a href="Gallery2.html" class="btn btn-arrow">
+                <span id="Discovermore" class="arrow text-dark"></span> اكتشف المزيد
+            </a>
+                <!-- <a href="#" class="btn btn-custom">اكتشف المزيد</a> -->
+            </div>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center">
+            <div class="card active">
+                <div class="icon-container">
+                    <img src="assets/images/ffffffffff.png" style="width:80px;height:80px; object-fit: cover;">
+                 </div>
+                 <div class="card-containt">
+                <h3 id="Wespecializee">استمتع بأشهى الأطباق الصحية!
+                </h3>
+                <p> اختيارك الأمثل للوجبات الصحية والمتوازنة، نحن الأفضل في القطاع الغذائي.</p>
+                 </div>
+                 <a href="Gallery.html" class="btn btn-arrow active">
+                    
+                    <span   class="arrow text-white active "></span> اكتشف المزيد
+                </a>
+                <!-- <a href="#" class="btn btn-custom">اكتشف المزيد</a> -->
+            </div>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center">
+            <div class="card">
+                <div class="icon-container">
+                    <img src="assets/images/fffff.png" style="width:80px;height:80px; object-fit: cover;">
+                </div>
+                <div class="card-containt">
+                    <h3 id="Wespecializeee">
+
+                   صحة ولذة في كل قضمة! </h3>
+                <p> اختيارك الأمثل للوجبات الصحية والمتوازنة، نحن الأفضل في القطاع الغذائي.</p>
+                </div>
+                <a href="Gallery.html" class="btn btn-arrow">
+                    <span  id="Discovermore" class="arrow text-dark"></span> اكتشف المزيد
+                </a>
+                <!-- <a href="#" class="btn btn-custom">اكتشف المزيد</a> -->
+            </div>
+        </div>
+       
+    </div>
+</div>
+ 
+ 
+   
+ 
+ <section class="menu-section text-center">
+        <div class="container">
+        
+             <h2  id="Enjoythebestmenu" class="m-5">استمتع بأفضل قائمة طعام<br> واحصل على <span>خصومات متاحة</span></h2>
+
+            <div class="row">
+                 <div class="col-md-6">
+                    <div class="menu-card"  id="menucard1" style="position: relative; background-image: url('assets/images/mmmmmmm.png'); background-size: cover; background-position: center; height: 100%; background-repeat: no-repeat;">
+                        <div class="card-body">
+
+                    
+                             <h3 id="MainDishesMenuu">أطعمة خالية من الغلوتين</h3>
+                            <p class="text-white">نقدم لكم أطباقًا شهية وصحية، تجمع بين المذاق الرائع والقيمة الغذائية العالية. تحضر بعناية من أجود المكونات الطازجة لتناسب كافة الأذواق وتلبي احتياجاتكم الغذائية.</p>
+                            <a href="Gallery.html" class="btn">صفحة المنيو</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- بطاقة أطعمة خالية من الغلوتين -->
+                <div class="col-md-6">
+                    <div class="menu-card" id="menucard2" style="position: relative; background-image: url('assets/images/mmmmmmmm.png'); background-size: cover; background-position: center; height: 100%; background-repeat: no-repeat;">
+                        <div class="card-body">
+                            <h3 id="MainDishesMenu">قائمـةالأطـباق الرئـيسـية</h3>
+                            <p class="text-white">نقدم لكم أطباقًا شهية وصحية، تجمع بين المذاق الرائع والقيمة الغذائية العالية. تحضر بعناية من أجود المكونات الطازجة لتناسب كافة الأذواق وتلبي احتياجاتكم الغذائية.</p>
+                            <a href="Gallery.html" class="btn">صفحة المنيو</a>
+                        </div>
+                         
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    
+    
+    <div class="container fruite py-5">
+        <div class="container py-4">
+            <div class="tab-class align-center">
+                <div class="col-lg-12">
+                    <span class="display-5 fw-bold">قائمة الاطعمة</span>
+                    <h3 class="m-5">استمتع بأفضل قائمة طعام<br> واحصل على <span>خصومات متاحة</span></h3>
+                </div>
+                <div class="tab-content">
+                    <div id="tab-1" class="tab-pane fade show p-0 active">
+                        <div class="row justify-content-center g-2"> <!-- استخدام justify-content-center -->
+                            <!-- بطاقة الأطعمة -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="rounded position-relative" style="background-color: white; border: 1px solid #ddd;">
+                                    <div class="fruite-img">
+                                        <img src="assets/images/b98dcd18c90f78b2f1eff83668221528.png" class="img-fluid w-100 rounded-3" alt="" style="height: 250px;width:250px; object-fit: cover;">
+                                        <div class="item-position" style="position: absolute; top: 10px; right: 10px; background-color: white; border-radius: 50%; padding: 5px;">
+                                            <a onclick="addToFavorites('طبق السلطة الصحي', '6.99', 'assets/images/b98dcd18c90f78b2f1eff83668221528.png', event)" class="like">
+                                                <i class="lni lni-heart" style="color: #5B9324;"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="p-3 border border-secondary border-top-0 rounded-bottom">
+                                        <div class="d-flex justify-content-between">
+                                            <span class="text-dark">طبق السلطة الصحي</span>
+                                            <span class="text-truncate">الاطباق الجانبية</span>
+                                        </div>
+                                        <br>
+                                        <span>يحتوى على 95 كالوري</span>
+                                        <div class="progress mb-3">
+                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between flex-lg-nowrap">
+                                            <span class="text-dark fs-6 fw-bold">6.99 ريال سعودي</span>
+                                            <a href="Detail.html" class="btn border border-secondary rounded-pill text-white" style="background-color: #5B9324;"> إقرأ المزيد</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="rounded position-relative" style="background-color: white; border: 1px solid #ddd;">
+                                    <div class="fruite-img">
+                                        <img src="assets/images/98ef5a21208bf7935f098065b974e326.png" class="img-fluid w-100 rounded-3" alt="" style="height: 250px;width:250px; object-fit: cover;">
+                                        <div class="item-position" style="position: absolute; top: 10px; right: 10px; background-color: white; border-radius: 50%; padding: 5px;"> <!-- إضافة خلفية بيضاء -->
+                                            <a onclick="addToFavorites('طبق الحلى الصحي', '6.99', 'assets/images/98ef5a21208bf7935f098065b974e326.png',event)" class="like">
+                                                <i class="lni lni-heart" style="color: #5B9324;"></i> <!-- تغيير لون الأيقونة إلى الأخضر -->
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="p-3 border border-secondary border-top-0 rounded-bottom">
+                                        <div class="d-flex justify-content-between">
+                                            <span class="text-dark">طبق الحلى الصحي</span>
+                                            <span class="text-truncate">الاطباق الجانبية</span>
+                                        </div>
+                                        <br>
+                                        <span>يحتوى على 95 كالوري</span>
+                                        <div class="progress mb-3">
+                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between flex-lg-nowrap">
+                                            <span class="text-dark fs-6 fw-bold">6.99 ريال سعودي</span>
+                                            <a href="Detail.html" class="btn border border-secondary rounded-pill text-white" style="background-color: #5B9324;"> إقرأ المزيد</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="rounded position-relative" style="background-color: white; border: 1px solid #ddd;">
+                                    <div class="fruite-img">
+                                        <img src="assets/images/b98dcd18c90f78b2f1eff83668221528.png" class="img-fluid w-100 rounded-3" alt="" style="height: 250px;width:250px; object-fit: cover;">
+                                        <div class="item-position" style="position: absolute; top: 10px; right: 10px; background-color: white; border-radius: 50%; padding: 5px;"> <!-- إضافة خلفية بيضاء -->
+                                            <a onclick="addToFavorites('طبق السلطة الصحي', '6.99', 'assets/images/b98dcd18c90f78b2f1eff83668221528.png',event)" class="like">
+                                                <i class="lni lni-heart" style="color: #5B9324;"></i> <!-- تغيير لون الأيقونة إلى الأخضر -->
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="p-3 border border-secondary border-top-0 rounded-bottom">
+                                        <div class="d-flex justify-content-between">
+                                            <span class="text-dark">طبق السلطة الصحي</span>
+                                            <span class="text-truncate">الاطباق الجانبية</span>
+                                        </div>
+                                        <br>
+                                        <span>يحتوى على 95 كالوري</span>
+                                        <div class="progress mb-3">
+                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between flex-lg-nowrap">
+                                            <span class="text-dark fs-6 fw-bold">6.99 ريال سعودي</span>
+                                            <a href="Detail.html" class="btn border border-secondary rounded-pill text-white" style="background-color: #5B9324;"> إقرأ المزيد</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="rounded position-relative" style="background-color: white; border: 1px solid #ddd;">
+                                    <div class="fruite-img">
+                                        <img src="assets/images/b98dcd18c90f78b2f1eff83668221528.png" class="img-fluid w-100 rounded-3" alt="" style="height: 250px;width:250px;  object-fit: cover;">
+                                        <div class="item-position" style="position: absolute; top: 10px; right: 10px; background-color: white; border-radius: 50%; padding: 5px;"> <!-- إضافة خلفية بيضاء -->
+                                            <a onclick="addToFavorites('طبق السلطة الصحي', '6.99', 'assets/images/b98dcd18c90f78b2f1eff83668221528.png',event)" class="like">
+                                                <i class="lni lni-heart" style="color: #5B9324;"></i> <!-- تغيير لون الأيقونة إلى الأخضر -->
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="p-3 border border-secondary border-top-0 rounded-bottom">
+                                        <div class="d-flex justify-content-between">
+                                            <span class="text-dark">طبق السلطة الصحي</span>
+                                            <span class="text-truncate">الاطباق الجانبية</span>
+                                        </div>
+                                        <br>
+                                        <span>يحتوى على 95 كالوري</span>
+                                        <div class="progress mb-3">
+                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between flex-lg-nowrap">
+                                            <span class="text-dark fs-6 fw-bold">6.99 ريال سعودي</span>
+                                            <a href="Detail.html" class="btn border border-secondary rounded-pill text-white" style="background-color: #5B9324;"> إقرأ المزيد</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="rounded position-relative" style="background-color: white; border: 1px solid #ddd;">
+                                    <div class="fruite-img">
+                                        <img src="assets/images/b98dcd18c90f78b2f1eff83668221528.png" class="img-fluid w-100 rounded-3" alt="" style="height: 250px;width:250px;  object-fit: cover;">
+                                        <div class="item-position" style="position: absolute; top: 10px; right: 10px; background-color: white; border-radius: 50%; padding: 5px;"> <!-- إضافة خلفية بيضاء -->
+                                            <a onclick="addToFavorites('طبق السلطة الصحي', '6.99', 'assets/images/b98dcd18c90f78b2f1eff83668221528.png',event)" class="like">
+                                                <i class="lni lni-heart" style="color: #5B9324;"></i> <!-- تغيير لون الأيقونة إلى الأخضر -->
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="p-3 border border-secondary border-top-0 rounded-bottom">
+                                        <div class="d-flex justify-content-between">
+                                            <span class="text-dark">طبق السلطة الصحي</span>
+                                            <span class="text-truncate">الاطباق الجانبية</span>
+                                        </div>
+                                        <br>
+                                        <span>يحتوى على 95 كالوري</span>
+                                        <div class="progress mb-3">
+                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between flex-lg-nowrap">
+                                            <span class="text-dark fs-6 fw-bold">6.99 ريال سعودي</span>
+                                            <a href="Detail.html" class="btn border border-secondary rounded-pill text-white" style="background-color: #5B9324;"> إقرأ المزيد</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="rounded position-relative" style="background-color: white; border: 1px solid #ddd;">
+                                    <div class="fruite-img">
+                                        <img src="assets/images/b98dcd18c90f78b2f1eff83668221528.png" class="img-fluid w-100 rounded-3" alt="" style="height: 250px;width:250px; object-fit: cover;">
+                                        <div class="item-position" style="position: absolute; top: 10px; right: 10px; background-color: white; border-radius: 50%; padding: 5px;"> <!-- إضافة خلفية بيضاء -->
+                                            <a onclick="addToFavorites('طبق السلطة الصحي', '6.99', 'assets/images/b98dcd18c90f78b2f1eff83668221528.png',event)" class="like">
+                                                <i class="lni lni-heart" style="color: #5B9324;"></i> <!-- تغيير لون الأيقونة إلى الأخضر -->
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="p-3 border border-secondary border-top-0 rounded-bottom">
+                                        <div class="d-flex justify-content-between">
+                                            <span class="text-dark">طبق السلطة الصحي</span>
+                                            <span class="text-truncate">الاطباق الجانبية</span>
+                                        </div>
+                                        <br>
+                                        <span>يحتوى على 95 كالوري</span>
+                                        <div class="progress mb-3">
+                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between flex-lg-nowrap">
+                                            <span class="text-dark fs-6 fw-bold">6.99 ريال سعودي</span>
+                                            <a href="Detail.html" class="btn border border-secondary rounded-pill text-white" style="background-color: #5B9324;"> إقرأ المزيد</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="rounded position-relative" style="background-color: white; border: 1px solid #ddd;">
+                                    <div class="fruite-img">
+                                        <img src="assets/images/b98dcd18c90f78b2f1eff83668221528.png" class="img-fluid w-100 rounded-3" alt="" style="height: 250px;width:250px; object-fit: cover;">
+                                        <div class="item-position" style="position: absolute; top: 10px; right: 10px; background-color: white; border-radius: 50%; padding: 5px;"> <!-- إضافة خلفية بيضاء -->
+                                            <a onclick="addToFavorites('طبق السلطة الصحي', '6.99', 'assets/images/b98dcd18c90f78b2f1eff83668221528.png',event)" class="like">
+                                                <i class="lni lni-heart" style="color: #5B9324;"></i> <!-- تغيير لون الأيقونة إلى الأخضر -->
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="p-3 border border-secondary border-top-0 rounded-bottom">
+                                        <div class="d-flex justify-content-between">
+                                            <span class="text-dark">طبق السلطة الصحي</span>
+                                            <span class="text-truncate">الاطباق الجانبية</span>
+                                        </div>
+                                        <br>
+                                        <span>يحتوى على 95 كالوري</span>
+                                        <div class="progress mb-3">
+                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between flex-lg-nowrap">
+                                            <span class="text-dark fs-6 fw-bold">6.99 ريال سعودي</span>
+                                            <a href="Detail.html" class="btn border border-secondary rounded-pill text-white" style="background-color: #5B9324;"> إقرأ المزيد</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="rounded position-relative" style="background-color: white; border: 1px solid #ddd;">
+                                    <div class="fruite-img">
+                                        <img src="assets/images/b98dcd18c90f78b2f1eff83668221528.png" class="img-fluid w-100 rounded-3" alt="" style="height: 250px;width:250px;  object-fit: cover;">
+                                        <div class="item-position" style="position: absolute; top: 10px; right: 10px; background-color: white; border-radius: 50%; padding: 5px;"> <!-- إضافة خلفية بيضاء -->
+                                            <a onclick="addToFavorites('طبق السلطة الصحي', '6.99', 'assets/images/b98dcd18c90f78b2f1eff83668221528.png',event)" class="like">
+                                                <i class="lni lni-heart" style="color: #5B9324;"></i> <!-- تغيير لون الأيقونة إلى الأخضر -->
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="p-3 border border-secondary border-top-0 rounded-bottom">
+                                        <div class="d-flex justify-content-between">
+                                            <span class="text-dark">طبق السلطة الصحي</span>
+                                            <span class="text-truncate">الاطباق الجانبية</span>
+                                        </div>
+                                        <br>
+                                        <span>يحتوى على 95 كالوري</span>
+                                        <div class="progress mb-3">
+                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between flex-lg-nowrap">
+                                            <span class="text-dark fs-6 fw-bold">6.99 ريال سعودي</span>
+                                            <a href="Detail.html" class="btn border border-secondary rounded-pill text-white" style="background-color: #5B9324;"> إقرأ المزيد</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          
+                       
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+     
+ 
+
+    
+
+    <section class="FrequentlyQuestions m-5">
+           <div class="container">
+            <div class="row">
+              <div class=" col-md-6 col-sm-12 align-center p-5">
+                <h3>   الأسئلة الشائعة</h3>
+                <p>مهمتنا هي جعل الأكل الصحي سهلًا
+                    <br/> وممتعًا وفي متناول الجميع. 
+                       <br/>
+                       <br/>
+                    سواء كنت تبحث عن وجبات مغذية، أو<br/>
+                     وجبات خفيفة عضوية، أو إرشادات غذائية،
+                     <br/> لدينا كل ما تحتاجه لتغذية جسمك وعقلك.</p>
+             
+              </div>
+              <div class=" col-md-6 col-sm-12">
+                
+                <div class="accordion " id="accordionExample">
+                   
+                 
+                    <div class="accordion-item bg-white ">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                            ما هي أنواع الوجبات الصحية التي يقدمها المطعم؟
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>نقدم مجموعة متنوعة من الوجبات الصحية، بما في ذلك الأطباق منخفضة السعرات، والخيارات الخالية من الجلوتين، والوجبات المتوازنة الغنية بالمغذيات..</strong> 
+                         </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item bg-white">
+                        <h2 class="accordion-header" id="headingOne">
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                              كيف يمكنني طلب الطعام؟
+  
+                          </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            <strong>                          مهمتنا هي جعل الأكل الصحي سهلًا وممتعًا وفي متناول الجميع. سواء كنت تبحث عن وجبات مغذية، أو وجبات خفيفة عضوية، أو إرشادات غذائية، لدينا كل ما تحتاجه لتغذية جسمك وعقلك.                        </div>
+                            </strong> 
+                           </div>
+                        </div>
+                        <div class="accordion-item bg-white">
+                      <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            هل يتم حساب السعرات الحرارية لكل وجبة؟
+                        </button>
+                      </h2>
+                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>This is the third item's accordion body.</strong> 
+                         </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item bg-white">
+                        <h2 class="accordion-header" id="headingThree">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThre" aria-expanded="false" aria-controls="collapseThre">
+                            هل تتوفر خيارات نباتية أو خالية من الجلوتين؟
+                          </button>
+                        </h2>
+                        <div id="collapseThre" class="accordion-collapse collapse" aria-labelledby="headingThre" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            <strong>This is the third item's accordion body.</strong> 
+                           </div>
+                        </div>
+                      </div>
+                  </div>
+                 
+  
+             
+            
+            </div>
+         
+           </div>
+    
+
+    </section>
+  
+   
+	 
+    <!-- Start Footer Area -->
+    <footer class="footer">
+        <!-- Start Footer Top -->
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <!-- Single Widget -->
+                        <div class="single-footer mobile-app  ">
+                            
+                       
+                             
+                                <img class="logo_footer" src="assets/images/logo/cc6627e592ae17ee34cfc41dacc44bfd.png" alt="logo_footer">
+                                <p >Healthy Park - مطعم يقدم وجبات صحية متوازنة ومحسوبة السعرات بعناية، لتستمتع بمذاق شهي يناسب أسلوب حياتك الصحي.</p>
+                           
+                        </div>
+                        <!-- End Single Widget -->
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <!-- Single Widget -->
+                        <div class="single-footer f-link">
+                            <h3>الروابط السريعة</h3>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <ul>
+                                        <li><a href="#">الصفحة الرئـــيســـية</a></li>
+                                        <li><a href="about.html">من نحــــــن</a></li>
+                                        <li><a href="javascript:void(0)">سياسة الخصوصية</a></li>
+                                        <li><a href="Gallery2.html">جميع الاطباق</a></li>
+                                        <li><a href="Gallery.html">الخالي من الجلوتين</a></li>
+                                    </ul>
+                                </div>
+                               
+                            </div>
+                        </div>   
+                        <!-- End Single Widget -->
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12 ">
+                        <!-- Single Widget -->
+                        <div class="single-footer f-link">
+                            <h3>أطعمة تناسب  حياتك</h3>
+                            <ul>
+                                <li><a href="javascript:void(0)">سندوتشات والبرجر</a></li>
+                                <li><a href="javascript:void(0)">الشوربات والسلطات</a></li>
+                                <li><a href="javascript:void(0)">الاطباق الجانبيه</a></li>
+                                <li><a href="javascript:void(0)">المشروبات</a></li>
+                                <li><a href="javascript:void(0)">الحلى</a></li>
+                            </ul>
+                        </div>
+                        <!-- End Single Widget -->
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12 align-center">
+                        <!-- Single Widget -->
+                        <div class="single-footer f-link">
+                            <h3>للتواصل معنا</h3>
+                            <ul>
+                                <li><a href="javascript:void(0)"> 009666666666</a></li>
+                                <li><a href="javascript:void(0)"> 009666666666</a></li>
+                                <li><a href="javascript:void(0)"> inf@healyh.com</a></li>
+                                <li><a href="javascript:void(0)"></a>inf@healyh.com</li>
+                                <li><a href="javascript:void(0)"></a>السعودية - الرياض</li>
+                            </ul>
+                        </div>
+                        <!-- End Single Widget -->
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <!--/ End Footer Middle -->
+        <!-- Start Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="inner">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="content  ">
+                                <ul class="footer-bottom-links">
+                                    <li><a href="javascript:void(0)">جميع الحقوق محفوظة لشركة الحديقة الصحية 2024</a></li>
+                                   
+                                </ul>
+                                <ul class="footer-bottom-links mt-1">
+                                    <li><a href="javascript:void(0)">تصميم وتطوير ــ  شركة فوتو</a></li>
+                                    <!-- <p class="copyright-text">تصميم وتطوير ــ <a href=""
+                                        rel="nofollow"  >شركة فوتو</a>
+                                </p> -->
+                                </ul>
+                               
+                                <ul class="footer-social">
+                                    <li><a href="javascript:void(0)"><i class="lni lni-facebook-filled"></i></a></li>
+                                    <li><a href="javascript:void(0)"><i class="lni lni-twitter-original"></i></a></li>
+                                    <li><a href="javascript:void(0)"><i class="lni lni-youtube"></i></a></li>
+                                    <li><a href="javascript:void(0)"><i class="lni lni-linkedin-original"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Footer Middle -->
+    </footer>
+   
+
+    <!-- ========================= scroll-top ========================= -->
+    <a href="#" class="scroll-top btn-hover">
+        <i class="lni lni-chevron-up"></i>
+    </a>
+    <!-- ========================= JS here ========================= -->
+    <script src="assets/js/bootstrap.min.js"></script>
+  
+         <script src="translation.js"></script>
+    <script src="ar.json"></script>
+    <script src="en.json"></script>
+    <script src="assets/js/main.js"></script>
+          <script src="assets/js/mainn.js"></script>
+          <script src="/assets/vendor/aos/dist/aos.js"></script>
+          <script>
+            $(document).on('ready', function () {
+              // initialization of aos
+              AOS.init({
+                duration: 650,
+                once: true
+              });
+            });
+          </script>
+    
+</body>
+
+</html>     
